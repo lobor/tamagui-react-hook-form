@@ -1,13 +1,12 @@
 {
   "name": "tamagui-react-hook-form",
-  "version": "0.1.0",
+  "version": "0.1.0-beta",
   "source": "src/index.ts",
   "types": "./types/index.d.ts",
   "main": "dist/cjs",
   "module": "dist/esm",
   "module:jsx": "dist/jsx",
   "files": [
-    "src",
     "types",
     "dist"
   ],
