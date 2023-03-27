@@ -1,0 +1,56 @@
+{
+  "name": "tamagui-react-hook-form",
+  "version": "0.1.0",
+  "source": "src/index.ts",
+  "types": "./types/index.d.ts",
+  "main": "dist/cjs",
+  "module": "dist/esm",
+  "module:jsx": "dist/jsx",
+  "files": [
+    "src",
+    "types",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tamagui-build",
+    "watch": "tamagui-build --watch",
+    "lint": "rome check src",
+    "lint:fix": "rome check --apply-suggested src",
+    "clean": "tamagui-build clean",
+    "clean:build": "tamagui-build clean:build"
+  },
+  "peerDependencies": {
+    "@tamagui/build": "*",
+    "@tamagui/checkbox": "*",
+    "@tamagui/form": "*",
+    "@tamagui/radio-group": "*",
+    "@tamagui/select": "*",
+    "@tamagui/slider": "*",
+    "@tamagui/stacks": "*",
+    "@tamagui/switch": "*",
+    "@tamagui/text": "*",
+    "@tamagui/web": "*",
+    "react": "*",
+    "react-hook-form": "*",
+    "tamagui": "*"
+  },
+  "devDependencies": {
+    "@tamagui/build": "1.9.0",
+    "@tamagui/checkbox": "^1.9.10",
+    "@tamagui/form": "^1.9.10",
+    "@tamagui/radio-group": "^1.9.10",
+    "@tamagui/select": "^1.9.10",
+    "@tamagui/slider": "^1.9.10",
+    "@tamagui/stacks": "^1.9.10",
+    "@tamagui/switch": "^1.9.10",
+    "@tamagui/text": "^1.9.10",
+    "@tamagui/web": "^1.9.10",
+    "@types/node": "^18.15.10",
+    "@types/react": "^18.0.29",
+    "react": "^18.2.0",
+    "react-hook-form": "^7.43.0",
+    "rome": "^11.0.0",
+    "tamagui": "^1.9.10",
+    "typescript": "^5.0.2"
+  }
+}
