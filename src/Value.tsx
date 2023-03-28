@@ -1,4 +1,4 @@
-import { SizableText, SizableTextProps } from '@tamagui/text'
+import { SizableText, SizableTextProps } from 'tamagui'
 import { useMemo } from 'react'
 import { FieldValues, useFormContext } from 'react-hook-form'
 import { useField } from './fieldContext'

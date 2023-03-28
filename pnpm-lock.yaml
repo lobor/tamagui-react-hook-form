@@ -2,15 +2,6 @@ lockfileVersion: 5.4
 
 specifiers:
   '@tamagui/build': 1.9.0
-  '@tamagui/checkbox': ^1.9.10
-  '@tamagui/form': ^1.9.10
-  '@tamagui/radio-group': ^1.9.10
-  '@tamagui/select': ^1.9.10
-  '@tamagui/slider': ^1.9.10
-  '@tamagui/stacks': ^1.9.10
-  '@tamagui/switch': ^1.9.10
-  '@tamagui/text': ^1.9.10
-  '@tamagui/web': ^1.9.10
   '@types/node': ^18.15.10
   '@types/react': ^18.0.29
   react: ^18.2.0
@@ -21,15 +12,6 @@ specifiers:
 
 devDependencies:
   '@tamagui/build': 1.9.0
-  '@tamagui/checkbox': 1.9.10_react@18.2.0
-  '@tamagui/form': 1.9.10_react@18.2.0
-  '@tamagui/radio-group': 1.9.10_react@18.2.0
-  '@tamagui/select': 1.9.10_k4en7uapxoluuejoeg6o3ic2aa
-  '@tamagui/slider': 1.9.10_react@18.2.0
-  '@tamagui/stacks': 1.9.10_react@18.2.0
-  '@tamagui/switch': 1.9.10_react@18.2.0
-  '@tamagui/text': 1.9.10_react@18.2.0
-  '@tamagui/web': 1.9.10_react@18.2.0
   '@types/node': 18.15.10
   '@types/react': 18.0.29
   react: 18.2.0

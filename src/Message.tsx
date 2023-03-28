@@ -1,5 +1,4 @@
-import { SizableText } from '@tamagui/text'
-import { GetProps, styled } from 'tamagui'
+import { SizableText, GetProps, styled } from 'tamagui'
 import { useMemo } from 'react'
 import {
   useFormContext,

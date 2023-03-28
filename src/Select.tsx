@@ -1,5 +1,4 @@
-import { withStaticProperties } from 'tamagui'
-import { Select } from '@tamagui/select'
+import { Select, withStaticProperties } from 'tamagui'
 
 import { withController } from './withController'
 

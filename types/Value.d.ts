@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { SizableTextProps } from '@tamagui/text';
+import { SizableTextProps } from 'tamagui';
 import { FieldValues } from 'react-hook-form';
 export type ValueProps = SizableTextProps & {
     name: keyof FieldValues;

@@ -1,5 +1,4 @@
-import { withStaticProperties } from 'tamagui'
-import { Slider } from '@tamagui/slider'
+import { Slider, withStaticProperties } from 'tamagui'
 
 import { withController } from './withController'
 

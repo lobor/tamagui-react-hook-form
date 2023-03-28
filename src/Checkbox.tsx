@@ -1,5 +1,4 @@
-import { withStaticProperties } from 'tamagui'
-import { Checkbox } from '@tamagui/checkbox'
+import { withStaticProperties, Checkbox } from 'tamagui'
 
 import { withController } from './withController'
 

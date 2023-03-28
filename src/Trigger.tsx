@@ -1,4 +1,4 @@
-import { Form, FormTriggerProps } from '@tamagui/form'
+import { Form, FormTriggerProps } from 'tamagui'
 import { useFormState } from 'react-hook-form'
 
 export const Trigger = (props: FormTriggerProps) => {
