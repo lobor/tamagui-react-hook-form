@@ -14,7 +14,7 @@ import {
   SwitchProps,
   TextAreaProps,
 } from "tamagui/types";
-import { MutableRefObject } from "react";
+import { MutableRefObject, PropsWithChildren } from "react";
 import {
   ControllerProps,
   FieldPath,
@@ -29,48 +29,55 @@ import { MessageProps } from "./Message";
 import { ValueProps } from "./Value";
 import { withController } from "./withController";
 
+export type Merge<A extends Function, B> = A & B;
+
+export type WithController<
+  TProps,
+  TFieldValues extends FieldValues = FieldValues
+> = React.ForwardRefRenderFunction<
+  unknown,
+  WithControllerProps<TProps, TFieldValues>
+>;
+
 export type FRef<TFieldValues extends FieldValues = FieldValues> =
   UseFormReturn<TFieldValues>;
 
 export type FormProps<TFieldValues extends FieldValues = FieldValues> =
-  UseFormProps<TFieldValues> &
-    Omit<FormDefaultProps, "onSubmit"> & {
-      onSubmit: SubmitHandler<TFieldValues>;
-      fRef?: MutableRefObject<FRef<TFieldValues> | null>;
-    };
+  PropsWithChildren<
+    UseFormProps<TFieldValues> &
+      Omit<FormDefaultProps, "onSubmit"> & {
+        onSubmit: SubmitHandler<TFieldValues>;
+        fRef?: MutableRefObject<FRef<TFieldValues> | null>;
+      }
+  >;
 
 type ExtractStaticProps<El> = Omit<El, "$$typeof">;
-type ExtractWithController<
-  TProps,
-  TFieldValues extends FieldValues = FieldValues
-> = Omit<ReturnType<typeof withController<TProps, TFieldValues>>, "$$typeof">;
 
 export type StaticProps<TFieldValues extends FieldValues = FieldValues> = {
-  Input: ExtractWithController<InputProps, TFieldValues>;
-  Checkbox: ExtractWithController<CheckboxProps, TFieldValues> &
+  Input: WithController<InputProps, TFieldValues>;
+  Checkbox: WithController<CheckboxProps, TFieldValues> &
     ExtractStaticProps<typeof Checkbox>;
-  RadioGroup: ExtractWithController<RadioGroupProps, TFieldValues> &
+  RadioGroup: WithController<RadioGroupProps, TFieldValues> &
     ExtractStaticProps<typeof RadioGroup>;
-  Select: ExtractWithController<SelectProps, TFieldValues> &
+  Select: WithController<SelectProps, TFieldValues> &
     ExtractStaticProps<typeof Select>;
-  Slider: ExtractWithController<SliderProps, TFieldValues> &
+  Slider: WithController<SliderProps, TFieldValues> &
     ExtractStaticProps<typeof Slider>;
-  Switch: ExtractWithController<SwitchProps, TFieldValues> &
+  Switch: WithController<SwitchProps, TFieldValues> &
     ExtractStaticProps<typeof Switch>;
-  TextArea: ExtractWithController<TextAreaProps, TFieldValues>;
+  TextArea: WithController<TextAreaProps, TFieldValues>;
   Trigger: typeof Form.Trigger;
-  Message: ExtractWithController<MessageProps, TFieldValues>;
-  Value: ExtractWithController<ValueProps, TFieldValues>;
+  Message: WithController<MessageProps, TFieldValues>;
+  Value: WithController<ValueProps, TFieldValues>;
   Field: typeof FieldControlled<TFieldValues>;
 };
 
 export type WithControllerProps<
   TProps,
   TFieldValues extends FieldValues = FieldValues
-> = Omit<TProps, "name"> &
-  Omit<
-    ControllerProps<TFieldValues, FieldPath<TFieldValues>>,
-    "render" | "control" | "name"
-  > & {
-    name?: FieldPath<TFieldValues>;
-  };
+> = Omit<
+  ControllerProps<TFieldValues, FieldPath<TFieldValues>>,
+  "render" | "control" | "name"
+> & {
+  name?: FieldPath<TFieldValues>;
+} & Omit<TProps, "name">;

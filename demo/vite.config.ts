@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     tamaguiPlugin({
       config: './src/tamagui.config.ts',
-      components: ["tamagui", "./src"],
+      components: ["tamagui", "tamagui-react-hook-form"],
     }),
   ],
 })

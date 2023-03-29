@@ -1,4 +1,3 @@
-import { Button, ButtonFrame, ButtonText, Switch } from "tamagui";
 import { Check } from "@tamagui/lucide-icons";
 import { FRef, createForm, withController } from "tamagui-react-hook-form";
 import { useRef, useState } from "react";
@@ -6,12 +5,14 @@ import {
   Label,
   SizableStack,
   SizableText,
-  Stack,
+  YStack,
   XGroup,
   XStack,
   styled,
+  Button,
+  ButtonFrame,
+  ButtonText,
 } from "tamagui";
-import { YStack } from "tamagui";
 
 interface SignUpValues {
   pseudo: "";
@@ -63,11 +64,13 @@ const CustomField = ({ onChange, value, id }: CustomFieldProps) => {
   );
 };
 
-const CustomFieldControlled = withController<CustomFieldProps, SignUpValues>(
-  CustomField
-);
+const extendsStatic = {
+  CustomField: {
+    component: CustomField,
+  }
+}
 
-const Form = createForm<SignUpValues>();
+const Form = createForm<SignUpValues, typeof extendsStatic>(extendsStatic);
 
 export const FormHookFormDemo = () => {
   const [values, setValues] = useState<SignUpValues>();
@@ -172,7 +175,7 @@ export const FormHookFormDemo = () => {
 
         <YStack>
           <Label htmlFor="prefer">What do you prefer?</Label>
-          <CustomFieldControlled id="prefer" name="prefer" />
+          <Form.CustomField id="prefer" name="prefer" />
         </YStack>
 
         <YStack>
