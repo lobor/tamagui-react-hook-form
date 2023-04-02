@@ -55,8 +55,8 @@ type ExtractStaticProps<El> = Omit<El, "$$typeof">;
 
 export type StaticProps<TFieldValues extends FieldValues = FieldValues> = {
   Input: WithController<InputProps, TFieldValues>;
-  Checkbox: WithController<CheckboxProps, TFieldValues> &
-    ExtractStaticProps<typeof Checkbox>;
+  // Checkbox: WithController<CheckboxProps, TFieldValues> &
+  //   ExtractStaticProps<typeof Checkbox>;
   RadioGroup: WithController<RadioGroupProps, TFieldValues> &
     ExtractStaticProps<typeof RadioGroup>;
   Select: WithController<SelectProps, TFieldValues> &

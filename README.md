@@ -36,11 +36,12 @@ Extends all components form from [tamagui.dev](https://tamagui.dev/) with react-
 
 ### Prerequisites
 
-Install package
+Install packages  
+react-hook-form is peer dependencies, you should install it
 
 - npm
   ```sh
-  npm install tamagui-react-hook-form@latest
+  npm install tamagui-react-hook-form@latest react-hook-form
   ```
 
 ## Anatomy

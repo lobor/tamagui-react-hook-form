@@ -10,7 +10,7 @@ import {
   useForm,
 } from "react-hook-form";
 
-import { CheckboxControlled } from "./Checkbox";
+// import { CheckboxControlled } from "./Checkbox";
 import { FieldControlled } from "./Field";
 import { InputControlled } from "./Input";
 import { Message } from "./Message";
@@ -30,7 +30,7 @@ import {
 import { Value } from "./Value";
 
 const defaultStaticProps = {
-  Checkbox: CheckboxControlled,
+  // Checkbox: CheckboxControlled,
   Input: InputControlled,
   RadioGroup: RadioGroupControlled,
   Select: SelectControlled,
