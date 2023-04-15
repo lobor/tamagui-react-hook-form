@@ -175,7 +175,12 @@ export const FormHookFormDemo = () => {
 
         <YStack>
           <Label htmlFor="prefer">What do you prefer?</Label>
-          <Form.CustomField id="prefer" name="prefer" />
+          <Form.CustomField
+          // TODO increase type on WithController
+          // @ts-ignore
+          id="prefer"
+          name="prefer"
+          />
         </YStack>
 
         <YStack>

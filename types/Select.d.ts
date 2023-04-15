@@ -1,10 +1,10 @@
 /// <reference types="react" />
 export declare const SelectControlled: import("react").ForwardRefExoticComponent<Omit<import("react-hook-form").ControllerProps<import("react-hook-form").FieldValues, string>, "name" | "control" | "render"> & {
     name?: string | undefined;
-} & Omit<Partial<import("@tamagui/select/types/types").ScopedProps<import("tamagui").SelectProps>>, "name"> & import("react").RefAttributes<unknown>> & {
-    Trigger: import("react").ForwardRefExoticComponent<Omit<import("tamagui").TextParentStyles, "TextComponent" | "noTextWrap"> & Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+} & Omit<Partial<import("@tamagui/select/types/types").ScopedProps<import("@tamagui/select").SelectProps>>, "name"> & import("react").RefAttributes<unknown>> & {
+    Trigger: import("react").ForwardRefExoticComponent<Omit<import("tamagui").TextParentStyles, "TextComponent" | "noTextWrap"> & Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     } & {
         readonly backgrounded?: boolean | undefined;
         readonly radiused?: boolean | undefined;
@@ -19,12 +19,12 @@ export declare const SelectControlled: import("react").ForwardRefExoticComponent
         readonly chromeless?: boolean | "all" | undefined;
     }, "disabled" | "size" | "unstyled" | "active"> & {
         readonly unstyled?: boolean | undefined;
-        readonly size?: import("tamagui").SizeTokens | undefined;
+        readonly size?: import("@tamagui/web").SizeTokens | undefined;
         readonly active?: boolean | undefined;
         readonly disabled?: boolean | undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     } & {
         readonly backgrounded?: boolean | undefined;
         readonly radiused?: boolean | undefined;
@@ -39,12 +39,12 @@ export declare const SelectControlled: import("react").ForwardRefExoticComponent
         readonly chromeless?: boolean | "all" | undefined;
     }, "disabled" | "size" | "unstyled" | "active"> & {
         readonly unstyled?: boolean | undefined;
-        readonly size?: import("tamagui").SizeTokens | undefined;
+        readonly size?: import("@tamagui/web").SizeTokens | undefined;
         readonly active?: boolean | undefined;
         readonly disabled?: boolean | undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     } & {
         readonly backgrounded?: boolean | undefined;
         readonly radiused?: boolean | undefined;
@@ -59,7 +59,7 @@ export declare const SelectControlled: import("react").ForwardRefExoticComponent
         readonly chromeless?: boolean | "all" | undefined;
     }, "disabled" | "size" | "unstyled" | "active"> & {
         readonly unstyled?: boolean | undefined;
-        readonly size?: import("tamagui").SizeTokens | undefined;
+        readonly size?: import("@tamagui/web").SizeTokens | undefined;
         readonly active?: boolean | undefined;
         readonly disabled?: boolean | undefined;
     }>> & import("@tamagui/web").ThemeableProps & {
@@ -78,74 +78,74 @@ export declare const SelectControlled: import("react").ForwardRefExoticComponent
         subTitle?: import("react").ReactNode;
         noTextWrap?: boolean | "all" | undefined;
     } & import("react").RefAttributes<any>>;
-    Value: import("react").ForwardRefExoticComponent<((Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{}, "size"> & {
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{}, "size"> & {
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{}, "size"> & {
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
+    Value: import("react").ForwardRefExoticComponent<((Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{}, "size"> & {
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{}, "size"> & {
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{}, "size"> & {
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
     }>> & {
         placeholder?: import("react").ReactNode;
-    }) | Omit<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
+    }) | Omit<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
     }, string | number> & {
         [x: string]: undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
     }, string | number> & {
         [x: string]: undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
     }, string | number> & {
-        [x: string]: undefined;
-    }>> & {
-        placeholder?: import("react").ReactNode;
-    }, "ref"> | Omit<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
-    } | ({
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
-    } & {
-        [x: string]: undefined;
-    }), string | number> & {
-        [x: string]: undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
-    } | ({
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
-    } & {
-        [x: string]: undefined;
-    }), string | number> & {
-        [x: string]: undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
-    } | ({
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
-    } & {
-        [x: string]: undefined;
-    }), string | number> & {
         [x: string]: undefined;
     }>> & {
         placeholder?: import("react").ReactNode;
-    }, "ref"> | Omit<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
+    }, "ref"> | Omit<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
     } | ({
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
     } & {
         [x: string]: undefined;
     }), string | number> & {
         [x: string]: undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
     } | ({
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
     } & {
         [x: string]: undefined;
     }), string | number> & {
         [x: string]: undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
     } | ({
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
+    } & {
+        [x: string]: undefined;
+    }), string | number> & {
+        [x: string]: undefined;
+    }>> & {
+        placeholder?: import("react").ReactNode;
+    }, "ref"> | Omit<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
+    } | ({
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
+    } & {
+        [x: string]: undefined;
+    }), string | number> & {
+        [x: string]: undefined;
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
+    } | ({
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
+    } & {
+        [x: string]: undefined;
+    }), string | number> & {
+        [x: string]: undefined;
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
+    } | ({
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
     } & {
         [x: string]: undefined;
     }), string | number> & {
@@ -159,9 +159,9 @@ export declare const SelectControlled: import("react").ForwardRefExoticComponent
     } & {
         __scopeSelect?: import("tamagui").Scope<any>;
     } & import("@tamagui/focus-scope").FocusScopeProps) => JSX.Element | null;
-    Viewport: import("react").ForwardRefExoticComponent<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+    Viewport: import("react").ForwardRefExoticComponent<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     }, "backgrounded" | "radiused" | "hoverTheme" | "pressTheme" | "focusTheme" | "circular" | "padded" | "elevate" | "bordered" | "transparent" | "chromeless"> & {
         readonly backgrounded?: boolean | undefined;
         readonly radiused?: boolean | undefined;
@@ -174,9 +174,9 @@ export declare const SelectControlled: import("react").ForwardRefExoticComponent
         readonly bordered?: number | boolean | undefined;
         readonly transparent?: boolean | undefined;
         readonly chromeless?: boolean | "all" | undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     }, "backgrounded" | "radiused" | "hoverTheme" | "pressTheme" | "focusTheme" | "circular" | "padded" | "elevate" | "bordered" | "transparent" | "chromeless"> & {
         readonly backgrounded?: boolean | undefined;
         readonly radiused?: boolean | undefined;
@@ -189,9 +189,9 @@ export declare const SelectControlled: import("react").ForwardRefExoticComponent
         readonly bordered?: number | boolean | undefined;
         readonly transparent?: boolean | undefined;
         readonly chromeless?: boolean | "all" | undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     }, "backgrounded" | "radiused" | "hoverTheme" | "pressTheme" | "focusTheme" | "circular" | "padded" | "elevate" | "bordered" | "transparent" | "chromeless"> & {
         readonly backgrounded?: boolean | undefined;
         readonly radiused?: boolean | undefined;
@@ -205,38 +205,38 @@ export declare const SelectControlled: import("react").ForwardRefExoticComponent
         readonly transparent?: boolean | undefined;
         readonly chromeless?: boolean | "all" | undefined;
     }>> & {
-        size?: import("tamagui").SizeTokens | undefined;
+        size?: import("@tamagui/web").SizeTokens | undefined;
         disableScroll?: boolean | undefined;
     } & import("react").RefAttributes<any>>;
-    Group: import("react").ForwardRefExoticComponent<((Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+    Group: import("react").ForwardRefExoticComponent<((Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
-    }>>) | Omit<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+    }>>) | Omit<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     }, string | number> & {
         [x: string]: undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     }, string | number> & {
         [x: string]: undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     }, string | number> & {
         [x: string]: undefined;
     }>>, "ref">) & import("react").RefAttributes<any>>;
-    Item: import("react").ForwardRefExoticComponent<import("tamagui").SelectItemProps & import("react").RefAttributes<any>>;
-    Label: import("react").ForwardRefExoticComponent<Omit<import("tamagui").TextParentStyles, "TextComponent" | "noTextWrap"> & Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+    Item: import("react").ForwardRefExoticComponent<import("@tamagui/select").SelectItemProps & import("react").RefAttributes<any>>;
+    Label: import("react").ForwardRefExoticComponent<Omit<import("tamagui").TextParentStyles, "TextComponent" | "noTextWrap"> & Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     } & {
         readonly backgrounded?: boolean | undefined;
         readonly radiused?: boolean | undefined;
@@ -251,12 +251,12 @@ export declare const SelectControlled: import("react").ForwardRefExoticComponent
         readonly chromeless?: boolean | "all" | undefined;
     }, "disabled" | "size" | "unstyled" | "active"> & {
         readonly unstyled?: boolean | undefined;
-        readonly size?: import("tamagui").SizeTokens | undefined;
+        readonly size?: import("@tamagui/web").SizeTokens | undefined;
         readonly active?: boolean | undefined;
         readonly disabled?: boolean | undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     } & {
         readonly backgrounded?: boolean | undefined;
         readonly radiused?: boolean | undefined;
@@ -271,12 +271,12 @@ export declare const SelectControlled: import("react").ForwardRefExoticComponent
         readonly chromeless?: boolean | "all" | undefined;
     }, "disabled" | "size" | "unstyled" | "active"> & {
         readonly unstyled?: boolean | undefined;
-        readonly size?: import("tamagui").SizeTokens | undefined;
+        readonly size?: import("@tamagui/web").SizeTokens | undefined;
         readonly active?: boolean | undefined;
         readonly disabled?: boolean | undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     } & {
         readonly backgrounded?: boolean | undefined;
         readonly radiused?: boolean | undefined;
@@ -291,7 +291,7 @@ export declare const SelectControlled: import("react").ForwardRefExoticComponent
         readonly chromeless?: boolean | "all" | undefined;
     }, "disabled" | "size" | "unstyled" | "active"> & {
         readonly unstyled?: boolean | undefined;
-        readonly size?: import("tamagui").SizeTokens | undefined;
+        readonly size?: import("@tamagui/web").SizeTokens | undefined;
         readonly active?: boolean | undefined;
         readonly disabled?: boolean | undefined;
     }>> & import("@tamagui/web").ThemeableProps & {
@@ -310,88 +310,88 @@ export declare const SelectControlled: import("react").ForwardRefExoticComponent
         subTitle?: import("react").ReactNode;
         noTextWrap?: boolean | "all" | undefined;
     } & import("react").RefAttributes<any>>;
-    ItemText: import("react").ForwardRefExoticComponent<((Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{}, "size"> & {
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{}, "size"> & {
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{}, "size"> & {
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
-    }>>) | Omit<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
+    ItemText: import("react").ForwardRefExoticComponent<((Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{}, "size"> & {
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{}, "size"> & {
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{}, "size"> & {
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
+    }>>) | Omit<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
     }, string | number> & {
         [x: string]: undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
     }, string | number> & {
         [x: string]: undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
-        readonly size?: import("tamagui").FontSizeTokens | undefined;
-    }, string | number> & {
-        [x: string]: undefined;
-    }>>, "ref">) & import("react").RefAttributes<any>>;
-    ItemIndicator: import("react").ForwardRefExoticComponent<((Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
-        readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
-        readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
-        readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
-    }>>) | Omit<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
-        readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
-    }, string | number> & {
-        [x: string]: undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
-        readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
-    }, string | number> & {
-        [x: string]: undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
-        readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendsBaseTextProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+        readonly size?: import("@tamagui/web").FontSizeTokens | undefined;
     }, string | number> & {
         [x: string]: undefined;
     }>>, "ref">) & import("react").RefAttributes<any>>;
-    ScrollUpButton: import("react").ForwardRefExoticComponent<import("tamagui").SelectScrollButtonProps & import("react").RefAttributes<any>>;
-    ScrollDownButton: import("react").ForwardRefExoticComponent<import("tamagui").SelectScrollButtonProps & import("react").RefAttributes<any>>;
+    ItemIndicator: import("react").ForwardRefExoticComponent<((Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+        readonly fullscreen?: boolean | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+        readonly fullscreen?: boolean | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+        readonly fullscreen?: boolean | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+    }>>) | Omit<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+        readonly fullscreen?: boolean | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+    }, string | number> & {
+        [x: string]: undefined;
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+        readonly fullscreen?: boolean | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+    }, string | number> & {
+        [x: string]: undefined;
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+        readonly fullscreen?: boolean | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+    }, string | number> & {
+        [x: string]: undefined;
+    }>>, "ref">) & import("react").RefAttributes<any>>;
+    ScrollUpButton: import("react").ForwardRefExoticComponent<import("@tamagui/select").SelectScrollButtonProps & import("react").RefAttributes<any>>;
+    ScrollDownButton: import("react").ForwardRefExoticComponent<import("@tamagui/select").SelectScrollButtonProps & import("react").RefAttributes<any>>;
     Sheet: import("react").FunctionComponent<Omit<import("@tamagui/sheet/types/types").SheetProps, "open" | "onOpenChange"> & import("react").RefAttributes<any>> & {
-        Handle: ({ __scopeSheet, ...props }: import("@tamagui/sheet/types/types").SheetScopedProps<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+        Handle: ({ __scopeSheet, ...props }: import("@tamagui/sheet/types/types").SheetScopedProps<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
             readonly fullscreen?: boolean | undefined;
-            readonly elevation?: import("tamagui").SizeTokens | undefined;
-        } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+            readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+        } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
             readonly fullscreen?: boolean | undefined;
-            readonly elevation?: import("tamagui").SizeTokens | undefined;
-        }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+            readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+        }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
             readonly fullscreen?: boolean | undefined;
-            readonly elevation?: import("tamagui").SizeTokens | undefined;
+            readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
         }>>>) => JSX.Element;
-        Frame: import("react").ForwardRefExoticComponent<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+        Frame: import("react").ForwardRefExoticComponent<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
             readonly fullscreen?: boolean | undefined;
-            readonly elevation?: import("tamagui").SizeTokens | undefined;
-        } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+            readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+        } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
             readonly fullscreen?: boolean | undefined;
-            readonly elevation?: import("tamagui").SizeTokens | undefined;
-        }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+            readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+        }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
             readonly fullscreen?: boolean | undefined;
-            readonly elevation?: import("tamagui").SizeTokens | undefined;
+            readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
         }>> & {
             __scopeSheet?: import("tamagui").Scope<any>;
         } & import("react").RefAttributes<unknown>>;
-        Overlay: ({ __scopeSheet, ...props }: import("@tamagui/sheet/types/types").SheetScopedProps<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+        Overlay: ({ __scopeSheet, ...props }: import("@tamagui/sheet/types/types").SheetScopedProps<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
             readonly fullscreen?: boolean | undefined;
-            readonly elevation?: import("tamagui").SizeTokens | undefined;
+            readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
         }, "closed"> & {
             readonly closed?: boolean | undefined;
-        } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+        } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
             readonly fullscreen?: boolean | undefined;
-            readonly elevation?: import("tamagui").SizeTokens | undefined;
+            readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
         }, "closed"> & {
             readonly closed?: boolean | undefined;
-        }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+        }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
             readonly fullscreen?: boolean | undefined;
-            readonly elevation?: import("tamagui").SizeTokens | undefined;
+            readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
         }, "closed"> & {
             readonly closed?: boolean | undefined;
         }>>>) => JSX.Element;
@@ -403,36 +403,36 @@ export declare const SelectControlled: import("react").ForwardRefExoticComponent
             shouldForwardSpace: boolean;
         };
     };
-    Icon: import("tamagui").TamaguiComponent<(Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+    Icon: import("@tamagui/web").TamaguiComponent<(Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{}, "elevation" | "fullscreen"> & {
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
-    }>>) | (Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
+    }>>) | (Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     }, string | number> & {
         [x: string]: undefined;
-    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+    } & import("@tamagui/web").MediaProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     }, string | number> & {
         [x: string]: undefined;
-    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
+    }>> & import("@tamagui/web").PseudoProps<Partial<Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     }, string | number> & {
         [x: string]: undefined;
-    }>>), any, Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps, {
+    }>>), any, Omit<any, string | number | symbol> & import("@tamagui/web").ExtendBaseStackProps & import("@tamagui/web").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps, {
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     } | ({
         readonly fullscreen?: boolean | undefined;
-        readonly elevation?: import("tamagui").SizeTokens | undefined;
+        readonly elevation?: import("@tamagui/web").SizeTokens | undefined;
     } & {
         [x: string]: undefined;
     })>;

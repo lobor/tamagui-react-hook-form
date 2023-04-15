@@ -1,4 +1,4 @@
-import { YStack, YStackProps } from 'tamagui'
+import { YStack, YStackProps } from '@tamagui/stacks'
 import { PropsWithChildren } from 'react'
 import { FieldPath, FieldValues } from 'react-hook-form'
 

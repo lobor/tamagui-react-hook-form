@@ -1,4 +1,5 @@
-import { RadioGroup, withStaticProperties } from 'tamagui'
+import { RadioGroup } from '@tamagui/radio-group'
+import { withStaticProperties } from "@tamagui/web";
 
 import { withController } from './withController'
 

@@ -1,4 +1,7 @@
 {
+  "include": [
+    "./src/**/*"
+  ],
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": ".",
@@ -14,7 +17,7 @@
     "inlineSourceMap": true,
     "preserveSymlinks": true,
     "jsx": "react-jsx",
-    "module": "system",
+    "module": "ESNext",
     "moduleResolution": "node",
     "noEmitOnError": false,
     "noImplicitAny": false,
@@ -29,11 +32,11 @@
     "sourceMap": false,
     "strictNullChecks": true,
     "target": "es2020",
-    "types": ["node", "react"],
-    "lib": ["dom", "esnext"],
+    "types": ["node", "react", "tamagui"],
+    "lib": ["dom", "esnext"]
   },
   "exclude": ["**/test", "**/dist", "**/types", "**/__tests__", "./demo"],
   "typeAcquisition": {
     "enable": true
-  },
+  }
 }

@@ -1,4 +1,4 @@
-import { YStackProps } from 'tamagui';
+import { YStackProps } from '@tamagui/stacks';
 import { PropsWithChildren } from 'react';
 import { FieldPath, FieldValues } from 'react-hook-form';
 export type FieldControlledProps<TFieldValues extends FieldValues = FieldValues> = PropsWithChildren<{

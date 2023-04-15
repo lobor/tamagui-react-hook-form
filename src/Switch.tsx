@@ -1,4 +1,5 @@
-import { Switch, withStaticProperties } from 'tamagui'
+import { Switch } from '@tamagui/switch'
+import { withStaticProperties } from '@tamagui/web'
 
 import { withController } from './withController'
 

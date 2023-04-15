@@ -1,4 +1,4 @@
-import { Checkbox, CheckboxProps, Form, FormProps as FormDefaultProps, InputProps, RadioGroup, RadioGroupProps, Select, SelectProps, Slider, SliderProps, Switch, SwitchProps, TextAreaProps } from "tamagui/types";
+import { Form, FormProps as FormDefaultProps, InputProps, RadioGroup, RadioGroupProps, Select, SelectProps, Slider, SliderProps, Switch, SwitchProps, TextAreaProps } from "tamagui/types";
 import { MutableRefObject, PropsWithChildren } from "react";
 import { ControllerProps, FieldPath, FieldValues, SubmitHandler, UseFormProps, UseFormReturn } from "react-hook-form";
 import { FieldControlled } from "./Field";
@@ -14,7 +14,6 @@ export type FormProps<TFieldValues extends FieldValues = FieldValues> = PropsWit
 type ExtractStaticProps<El> = Omit<El, "$$typeof">;
 export type StaticProps<TFieldValues extends FieldValues = FieldValues> = {
     Input: WithController<InputProps, TFieldValues>;
-    Checkbox: WithController<CheckboxProps, TFieldValues> & ExtractStaticProps<typeof Checkbox>;
     RadioGroup: WithController<RadioGroupProps, TFieldValues> & ExtractStaticProps<typeof RadioGroup>;
     Select: WithController<SelectProps, TFieldValues> & ExtractStaticProps<typeof Select>;
     Slider: WithController<SliderProps, TFieldValues> & ExtractStaticProps<typeof Slider>;

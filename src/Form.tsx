@@ -1,8 +1,7 @@
 import {
-  useIsomorphicLayoutEffect,
-  withStaticProperties,
   Form as FormDefault,
-} from "tamagui";
+} from "@tamagui/form";
+import { withStaticProperties, useIsomorphicLayoutEffect } from "@tamagui/web";
 import {
   ControllerRenderProps,
   FieldValues,

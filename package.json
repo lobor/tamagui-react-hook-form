@@ -1,6 +1,6 @@
 {
   "name": "tamagui-react-hook-form",
-  "version": "0.1.0-beta-2",
+  "version": "0.1.0-beta-5",
   "source": "src/index.ts",
   "types": "./types/index.d.ts",
   "main": "dist/cjs",
@@ -22,12 +22,14 @@
     "clean:build": "tamagui-build clean:build"
   },
   "peerDependencies": {
+    "@tamagui/checkbox": "*",
     "react": "*",
     "react-hook-form": "*",
     "tamagui": "*"
   },
   "devDependencies": {
     "@tamagui/build": "*",
+    "@tamagui/checkbox": "*",
     "@types/node": "^18.15.10",
     "@types/react": "^18.0.29",
     "chokidar": "^3.5.3",
