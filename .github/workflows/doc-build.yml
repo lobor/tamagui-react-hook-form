@@ -1,7 +1,12 @@
 on:
   push:
     branches:
-     - 'main'
+      - 'main'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
