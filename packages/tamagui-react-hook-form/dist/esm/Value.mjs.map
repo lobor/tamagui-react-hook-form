@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/Value.tsx"],
+  "sourcesContent": ["import { SizableText, SizableTextProps } from 'tamagui'\nimport { useMemo } from 'react'\nimport { FieldValues, useFormContext } from 'react-hook-form'\nimport { useField } from './fieldContext'\n\nexport type ValueProps = SizableTextProps & { name: keyof FieldValues }\n\nexport const Value = ({ name, ...props }: ValueProps) => {\n  const { name: nameField } = useField()\n  const { watch } = useFormContext()\n  const value = watch(name ?? nameField)\n  return useMemo(() => <SizableText {...props}>{value}</SizableText>, [value, props])\n}\n"],
+  "mappings": "AAAA,SAAS,mBAAqC;AAC9C,SAAS,eAAe;AACxB,SAAsB,sBAAsB;AAC5C,SAAS,gBAAgB;AAIlB,MAAM,QAAQ,CAAC,EAAE,MAAM,GAAG,MAAM,MAAkB;AACvD,QAAM,EAAE,MAAM,UAAU,IAAI,SAAS;AACrC,QAAM,EAAE,MAAM,IAAI,eAAe;AACjC,QAAM,QAAQ,MAAM,QAAQ,SAAS;AACrC,SAAO,QAAQ,MAAM,CAAC,gBAAgB,QAAQ,MAAM,EAA9B,cAA8C,CAAC,OAAO,KAAK,CAAC;AACpF;",
+  "names": []
+}

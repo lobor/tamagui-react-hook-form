@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/Checkbox.tsx"],
+  "sourcesContent": ["import { withStaticProperties, Checkbox } from 'tamagui'\n\nimport { withController } from './withController'\n\nconst { Indicator } = Checkbox\n\nexport const CheckboxControlled = withStaticProperties(\n  withController(Checkbox, { onChange: 'onCheckedChange' }),\n  {\n    Indicator,\n  }\n)\n"],
+  "mappings": "AAAA,SAAS,sBAAsB,gBAAgB;AAE/C,SAAS,sBAAsB;AAE/B,MAAM,EAAE,UAAU,IAAI;AAEf,MAAM,qBAAqB;AAAA,EAChC,eAAe,UAAU,EAAE,UAAU,kBAAkB,CAAC;AAAA,EACxD;AAAA,IACE;AAAA,EACF;AACF;",
+  "names": []
+}
