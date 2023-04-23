@@ -19,7 +19,7 @@ jobs:
           node-version: 16.x
           cache: yarn
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --non-interactive
+        run: yarn install --frozen-lockfile
       - name: Build
         run: yarn doc:prod
       # 👆 Build steps
