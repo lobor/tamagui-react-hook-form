@@ -1,230 +1,93 @@
-<!-- # tamagui-react-hook-form
-react-hook-form integration with tamagui form components -->
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+# Tamagui + Solito + Next + Expo Monorepo
 
-<a name="readme-top"></a>
-
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/tamagui/tamagui">
-    <img src="https://github.com/tamagui/tamagui/raw/master/apps/site/public/social.png" alt="Tamagui" width="250">
-  </a>
-  <span style="font-size: 7rem;">+</span>
-  <a href="https://github.com/react-hook-form/react-hook-form" style="margin-left: 100px;">
-    <img src="https://avatars.githubusercontent.com/u/53986236?s=200&v=4" alt="React hook form" width="80" height="80">
-  </a>
-
-<h3 align="center">tamagui-react-hook-form</h3>
-</div>
-
-## About The Project
-
-Extends all components form from [tamagui.dev](https://tamagui.dev/) with react-hook-form
-
-<!-- GETTING STARTED -->
-
-## Getting Started
-
-### Prerequisites
-
-Install packages  
-react-hook-form is peer dependencies, you should install it
-
-- npm
-  ```sh
-  npm install tamagui-react-hook-form@latest react-hook-form
-  ```
-
-## Anatomy
-See exemple [here](./demo/FormHookFormDemo.tsx)
-
-```TSX
-import { createForm } from "tamagui-react-hook-form";
-
-const Form = createForm();
-
-export default () => (
-  <Form>
-    <Form.Input />
-    <Form.Message />
-    <Form.Value />
-
-    <Form.Field>
-      <Form.Input />
-      <Form.Message />
-      <Form.Value />
-    </Form.Field>
-
-    <Form.Slider>
-      <Form.Slider.Track>
-        <Form.Slider.TrackActive />
-      </Form.Slider.Track>
-      <Form.Slider.Thumb />
-    </Form.Slider>
-
-    <Form.Switch>
-      <Form.Switch.Thumb />
-    </Form.Switch>
-
-    <Form.RadioGroup>
-      <Form.RadioGroup.Item>
-        <Form.RadioGroup.Indicator />
-      </Form.RadioGroup.Item>
-    </Form.RadioGroup>
-
-    <Form.Checkbox>
-      <Form.Checkbox.Indicator>
-        <Check />
-      </Form.Checkbox.Indicator>
-    </Form.Checkbox>
-
-    <Form.Trigger />
-  </Form>
-);
+```sh
+npm create tamagui
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## 🔦 About
 
-## Common props
+This monorepo is a starter for an Expo + Next.js + Tamagui + Solito app.
 
-A prop exists for all components (except Form), it is `name`. It allows you to select the fields of the form
+Many thanks to [@FernandoTheRojo](https://twitter.com/fernandotherojo) for the Solito starter monorepo which this was forked from. Check out his [talk about using expo + next together at Next.js Conf 2021](https://www.youtube.com/watch?v=0lnbdRweJtA).
 
-```typescript
-import { createForm } from "tamagui-react-hook-form";
+## 📦 Included packages
 
-interface FormValues {
-  pseudo: string;
-}
+- [Tamagui](https://tamagui.dev) 🪄
+- [solito](https://solito.dev) for cross-platform navigation
+- Expo SDK
+- Next.js
+- React Navigation
 
-const Form = createForm<FormValues>();
+## 🗂 Folder layout
 
-export default () => {
-  return (
-    <Form defaultValues={{ pseudo: "" }}>
-      <Form.Input name="pseudo" />
-      <Form.Value name="pseudo" />
-    </Form>
-  );
-};
+The main apps are:
+
+- `expo` (native)
+- `next` (web)
+
+- `packages` shared packages across apps
+  - `ui` includes your custom UI kit that will be optimized by Tamagui
+  - `app` you'll be importing most files from `app/`
+    - `features` (don't use a `screens` folder. organize by feature.)
+    - `provider` (all the providers that wrap the app, and some no-ops for Web.)
+    - `navigation` Next.js has a `pages/` folder. React Native doesn't. This folder contains navigation-related code for RN. You may use it for any navigation code, such as custom links.
+
+You can add other folders inside of `packages/` if you know what you're doing and have a good reason to.
+
+## 🏁 Start the app
+
+- Install dependencies: `yarn`
+
+- Next.js local dev: `yarn web`
+
+To run with optimizer on in dev mode (just for testing, it's faster to leave it off): `yarn web:extract`. To build for production `yarn web:prod`.
+
+To see debug output to verify the compiler, add `// debug` as a comment to the top of any file.
+
+- Expo local dev: `yarn native`
+
+
+## Developing
+
+We've added `packages/ui` to show an example of [building your own design system](https://tamagui.dev/docs/guides/design-systems).
+
+## UI Kit
+
+Note we're following the [design systems guide](https://tamagui.dev/docs/guides/design-systems) and creating our own package for components.
+
+See `packages/ui` named `@my/ui` for how this works.
+
+## 🆕 Add new dependencies
+
+### Pure JS dependencies
+
+If you're installing a JavaScript-only dependency that will be used across platforms, install it in `packages/app`:
+
+```sh
+cd packages/app
+yarn add date-fns
+cd ../..
+yarn
 ```
 
-It can be repetitive to add to each component the prop `name`, so you can use Form.Field component
+### Native dependencies
 
-```typescript
-import { createForm } from "tamagui-react-hook-form";
+If you're installing a library with any native code, you must install it in `expo`:
 
-interface FormValues {
-  pseudo: string;
-}
-
-const Form = createForm<FormValues>();
-
-export default () => {
-  return (
-    <Form defaultValues={{ pseudo: "" }}>
-      <Form.Field name="pseudo">
-        <Form.Input />
-        <Form.Value />
-      </Form.Field>
-    </Form>
-  );
-};
+```sh
+cd apps/expo
+yarn add react-native-reanimated
+cd ..
+yarn
 ```
 
-## API
+You can also install the native library inside of `packages/app` if you want to get autoimport for that package inside of the `app` folder. However, you need to be careful and install the _exact_ same version in both packages. If the versions mismatch at all, you'll potentially get terrible bugs. This is a classic monorepo issue. I use `lerna-update-wizard` to help with this (you don't need to use Lerna to use that lib).
 
-### Form
+You may potentially want to have the native module transpiled for the next app. If you get error messages with ```Cannot use import statement outside a module```, you may need to use `transpilePackages` in your `next.config.js` and add the module to the array there.
 
-Wrap tamagui [Form](https://tamagui.dev/docs/components/form) with [FormProvider](https://react-hook-form.com/api/formprovider/) of react-hook-form
+### Deploying to Vercel
 
-```typescript
-export default () => {
-  return (
-    <Form
-      onSubmit={(values) => {
-        console.log(values);
-      }}
-    >
-      {/* ... */}
-    </Form>
-  );
-};
-```
-
-#### Props
-
-Extends all props of [FromProps](https://tamagui.dev/docs/components/form#api) and [UseFormProps](https://react-hook-form.com/ts/#UseFormProps)
-
-| Props | Required | Description      |
-| ----- | -------- | ---------------- |
-| fRef  | false    | Get form context |
-
-### Message
-
-Show error message if you use with validation
-
-```typescript
-export default () => {
-  return <Form.Message />;
-};
-```
-
-#### Props
-
-Extends all props of [SizableText](https://tamagui.dev/docs/components/text#sizabletext)
-
-| Props | Required | Description                                  |
-| ----- | -------- | -------------------------------------------- |
-| name  | false    | Key corresponding to the type of values used |
-
-### Value
-
-Show value of element form
-
-```typescript
-export default () => {
-  return <Form.Value />;
-};
-```
-
-#### Props
-
-Extends all props of [SizableText](https://tamagui.dev/docs/components/text#sizabletext)
-
-| Props | Required | Description                                  |
-| ----- | -------- | -------------------------------------------- |
-| name  | false    | Key corresponding to the type of values used |
-
-<!-- CONTRIBUTING -->
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-## License
-
-Distributed under the Apache License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- Root: `./apps/next`
+- Install command to be `yarn set version berry && yarn install`
+- Build command: leave default setting
+- Output dir: leave default setting

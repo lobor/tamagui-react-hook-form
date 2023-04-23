@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/Select.tsx"],
+  "sourcesContent": ["import { Select, withStaticProperties } from 'tamagui'\n\nimport { withController } from './withController'\n\nconst {\n  Trigger,\n  Value,\n  Content,\n  Viewport,\n  Group,\n  Item,\n  ItemText,\n  ItemIndicator,\n  ScrollUpButton,\n  ScrollDownButton,\n  Label,\n  Sheet,\n  Adapt,\n  Icon,\n} = Select\n\nexport const SelectControlled = withStaticProperties(\n  withController(Select, { onChange: \"onValueChange\"}),\n  {\n    Trigger,\n    Value,\n    Content,\n    Viewport,\n    Group,\n    Item,\n    Label,\n    ItemText,\n    ItemIndicator,\n    ScrollUpButton,\n    ScrollDownButton,\n    Sheet,\n    Adapt,\n    Icon,\n  }\n)\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,qBAA6C;AAE7C,4BAA+B;AAE/B,MAAM;AAAA,EACJ;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AACF,IAAI;AAEG,MAAM,uBAAmB;AAAA,MAC9B,sCAAe,uBAAQ,EAAE,UAAU,gBAAe,CAAC;AAAA,EACnD;AAAA,IACE;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,EACF;AACF;",
+  "names": []
+}

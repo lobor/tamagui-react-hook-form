@@ -1,42 +1,40 @@
 {
-  "name": "tamagui-react-hook-form",
-  "version": "0.1.0-beta-2",
-  "source": "src/index.ts",
-  "types": "./types/index.d.ts",
-  "main": "dist/cjs",
-  "module": "dist/esm",
-  "module:jsx": "dist/jsx",
-  "files": [
-    "types",
-    "dist"
+  "name": "tamagui-react-hook-form-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
   ],
-  "repository": {
-    "url": "https://github.com/lobor/tamagui-react-hook-form"
-  },
   "scripts": {
-    "build": "tamagui-build",
-    "watch": "tamagui-build --watch",
-    "lint": "rome check src",
-    "lint:fix": "rome check --apply-suggested src",
-    "clean": "tamagui-build clean",
-    "clean:build": "tamagui-build clean:build"
+    "native": "cd apps/expo && yarn start",
+    "watch": "yarn workspaces foreach -pi run watch",
+    "vercel:install": "yarn set version 3.5 && yarn install",
+    "web": "yarn build && cd apps/next && yarn next",
+    "web:extract": "DISABLE_EXTRACTION=false yarn workspace next-app dev",
+    "web:prod": "yarn workspace next-app build",
+    "web:prod:serve": "yarn workspace next-app serve",
+    "doc": "yarn build && cd apps/doc && yarn start",
+    "doc:prod": "yarn build && cd apps/doc && yarn build",
+    "fix": "manypkg fix",
+    "postinstall": "yarn build",
+    "build": "yarn workspaces foreach --exclude next-app run build",
+    "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader && manypkg upgrade react-native-web-lite"
   },
-  "peerDependencies": {
-    "react": "*",
-    "react-hook-form": "*",
-    "tamagui": "*"
+  "resolutions": {
+    "@types/react-native": "0.70.8",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-refresh": "^0.14.0",
+    "react-native-svg": "13.4.0",
+    "react-native-web": "0.18.9"
   },
-  "devDependencies": {
-    "@tamagui/build": "*",
-    "@types/node": "^18.15.10",
-    "@types/react": "^18.0.29",
-    "chokidar": "^3.5.3",
-    "esbuild": "^0.17.14",
-    "react": "^18.2.0",
-    "react-hook-form": "^7.43.0",
-    "rome": "^11.0.0",
-    "tamagui": "*",
-    "typescript": "^5.0.2"
+  "dependencies": {
+    "@babel/runtime": "^7.18.9",
+    "@manypkg/cli": "^0.19.1",
+    "eslint": "^8.21.0",
+    "prettier": "^2.7.1",
+    "turbo": "^1.8.3",
+    "typescript": "^4.7.4"
   },
-  "packageManager": "^yarn@1.22.19"
+  "packageManager": "yarn@3.5.0"
 }

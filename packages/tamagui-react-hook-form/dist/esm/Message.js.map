@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/Message.tsx"],
+  "sourcesContent": ["import { SizableText, GetProps, styled } from 'tamagui'\nimport { useMemo } from 'react'\nimport {\n  useFormContext,\n  useFormState,\n  FieldValues,\n} from 'react-hook-form'\nimport { useField } from './fieldContext'\n\nconst MessageText = styled(SizableText, {\n  name: \"FormMessageText\",\n  color: \"red\"\n})\n\nexport type MessageProps = GetProps<typeof MessageText> & { name: keyof FieldValues }\n\nexport const Message = ({ name: nameProps, ...props }: MessageProps) => {\n  const { name: nameField } = useField()\n  const name = nameProps ?? nameField;\n  const { control } = useFormContext()\n  const { errors } = useFormState({ control, name })\n  return useMemo(\n    () => (errors[name]?.message ? <MessageText {...props}>{errors[name]?.message}</MessageText> : null),\n    [errors[name]?.message]\n  )\n}\n"],
+  "mappings": "AAAA,SAAS,aAAuB,cAAc;AAC9C,SAAS,eAAe;AACxB;AAAA,EACE;AAAA,EACA;AAAA,OAEK;AACP,SAAS,gBAAgB;AAEzB,MAAM,cAAc,OAAO,aAAa;AAAA,EACtC,MAAM;AAAA,EACN,OAAO;AACT,CAAC;AAIM,MAAM,UAAU,CAAC,EAAE,MAAM,WAAW,GAAG,MAAM,MAAoB;AAhBxE;AAiBE,QAAM,EAAE,MAAM,UAAU,IAAI,SAAS;AACrC,QAAM,OAAO,aAAa;AAC1B,QAAM,EAAE,QAAQ,IAAI,eAAe;AACnC,QAAM,EAAE,OAAO,IAAI,aAAa,EAAE,SAAS,KAAK,CAAC;AACjD,SAAO;AAAA,IACL,MAAG;AAtBP,UAAAA,KAAA;AAsBW,eAAAA,MAAA,OAAO,IAAI,MAAX,gBAAAA,IAAc,WAAU,CAAC,gBAAgB,SAAQ,YAAO,IAAI,MAAX,mBAAc,QAAQ,EAA9C,eAA+D;AAAA;AAAA,IAC/F,EAAC,YAAO,IAAI,MAAX,mBAAc,OAAO;AAAA,EACxB;AACF;",
+  "names": ["_a"]
+}
