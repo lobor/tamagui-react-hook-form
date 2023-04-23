@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../src/Textarea.tsx"],
-  "sourcesContent": ["import { TextArea } from 'tamagui'\n\nimport { withController } from './withController'\n\nexport const TextAreaControlled = withController(TextArea, { onChange: 'onChangeText' })\n"],
-  "mappings": "AAAA,SAAS,gBAAgB;AAEzB,SAAS,sBAAsB;AAExB,MAAM,qBAAqB,eAAe,UAAU,EAAE,UAAU,eAAe,CAAC;",
-  "names": []
-}

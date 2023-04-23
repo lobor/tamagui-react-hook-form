@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../src/Switch.tsx"],
-  "sourcesContent": ["import { Switch, withStaticProperties } from 'tamagui'\n\nimport { withController } from './withController'\n\nconst { Thumb } = Switch;\n\nexport const SwitchControlled = withStaticProperties(\n  withController(Switch, {\n    onChange: 'onCheckedChange',\n    value: 'checked',\n  }),\n  { Thumb }\n)\n"],
-  "mappings": "AAAA,SAAS,QAAQ,4BAA4B;AAE7C,SAAS,sBAAsB;AAE/B,MAAM,EAAE,MAAM,IAAI;AAEX,MAAM,mBAAmB;AAAA,EAC9B,eAAe,QAAQ;AAAA,IACrB,UAAU;AAAA,IACV,OAAO;AAAA,EACT,CAAC;AAAA,EACD,EAAE,MAAM;AACV;",
-  "names": []
-}

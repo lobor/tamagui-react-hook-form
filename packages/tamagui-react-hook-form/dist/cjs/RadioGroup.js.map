@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../src/RadioGroup.tsx"],
-  "sourcesContent": ["import { RadioGroup, withStaticProperties } from 'tamagui'\n\nimport { withController } from './withController'\n\nconst { Item, Indicator } = RadioGroup\n\nexport const RadioGroupControlled = withStaticProperties(\n  withController(RadioGroup, {\n    onChange: 'onValueChange',\n  }),\n  { Item, Indicator }\n)\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,qBAAiD;AAEjD,4BAA+B;AAE/B,MAAM,EAAE,MAAM,UAAU,IAAI;AAErB,MAAM,2BAAuB;AAAA,MAClC,sCAAe,2BAAY;AAAA,IACzB,UAAU;AAAA,EACZ,CAAC;AAAA,EACD,EAAE,MAAM,UAAU;AACpB;",
-  "names": []
-}

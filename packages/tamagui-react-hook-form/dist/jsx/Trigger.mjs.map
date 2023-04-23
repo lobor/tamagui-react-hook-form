@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../src/Trigger.tsx"],
-  "sourcesContent": ["import { Form, FormTriggerProps } from 'tamagui'\nimport { useFormState } from 'react-hook-form'\n\nexport const Trigger = (props: FormTriggerProps) => {\n  const { isValid } = useFormState()\n  // @ts-ignore\n  return <Form.Trigger disabled={!isValid} {...props} />\n}\n"],
-  "mappings": "AAAA,SAAS,YAA8B;AACvC,SAAS,oBAAoB;AAEtB,MAAM,UAAU,CAAC,UAA4B;AAClD,QAAM,EAAE,QAAQ,IAAI,aAAa;AAEjC,SAAO,CAAC,KAAK,QAAQ,UAAU,CAAC,aAAa,OAAO;AACtD;",
-  "names": []
-}

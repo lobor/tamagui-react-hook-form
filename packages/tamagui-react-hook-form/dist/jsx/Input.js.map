@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../src/Input.tsx"],
-  "sourcesContent": ["import { Input } from 'tamagui'\n\nimport { withController } from './withController'\n\nexport const InputControlled = withController(Input, { onChange: 'onChangeText' })\n"],
-  "mappings": "AAAA,SAAS,aAAa;AAEtB,SAAS,sBAAsB;AAExB,MAAM,kBAAkB,eAAe,OAAO,EAAE,UAAU,eAAe,CAAC;",
-  "names": []
-}

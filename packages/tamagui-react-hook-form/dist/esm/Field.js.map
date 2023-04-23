@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../src/Field.tsx"],
-  "sourcesContent": ["import { YStack, YStackProps } from 'tamagui'\nimport { PropsWithChildren } from 'react'\nimport { FieldPath, FieldValues } from 'react-hook-form'\n\nimport { fieldContext } from './fieldContext'\n\nexport type FieldControlledProps<TFieldValues extends FieldValues = FieldValues> =\n  PropsWithChildren<{ name: FieldPath<TFieldValues> }> & YStackProps\n\nexport function FieldControlled<TFieldValues extends FieldValues = FieldValues>({\n  children,\n  name,\n  ...props\n}: FieldControlledProps<TFieldValues>) {\n  return (\n    <fieldContext.Provider value={{ name }}>\n      <YStack {...props}>{children}</YStack>\n    </fieldContext.Provider>\n  )\n}\n"],
-  "mappings": "AAAA,SAAS,cAA2B;AAIpC,SAAS,oBAAoB;AAKtB,SAAS,gBAAgE;AAAA,EAC9E;AAAA,EACA;AAAA,EACA,GAAG;AACL,GAAuC;AACrC,SACE,CAAC,aAAa,SAAS,OAAO,EAAE,KAAK,GACnC,CAAC,WAAW,QAAQ,SAAS,EAA5B,OACH,EAFC,aAAa;AAIlB;",
-  "names": []
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../src/Slider.tsx"],
-  "sourcesContent": ["import { Slider, withStaticProperties } from 'tamagui'\n\nimport { withController } from './withController'\n\nconst { Track, TrackActive, Thumb } = Slider\n\nexport const SliderControlled = withStaticProperties(\n  withController(Slider, { onChange: 'onValueChange' }),\n  { Track, TrackActive, Thumb }\n)\n"],
-  "mappings": "AAAA,SAAS,QAAQ,4BAA4B;AAE7C,SAAS,sBAAsB;AAE/B,MAAM,EAAE,OAAO,aAAa,MAAM,IAAI;AAE/B,MAAM,mBAAmB;AAAA,EAC9B,eAAe,QAAQ,EAAE,UAAU,gBAAgB,CAAC;AAAA,EACpD,EAAE,OAAO,aAAa,MAAM;AAC9B;",
-  "names": []
-}
