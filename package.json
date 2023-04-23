@@ -13,6 +13,8 @@
     "web:extract": "DISABLE_EXTRACTION=false yarn workspace next-app dev",
     "web:prod": "yarn workspace next-app build",
     "web:prod:serve": "yarn workspace next-app serve",
+    "doc": "yarn build && cd apps/doc && yarn start",
+    "doc:prod": "yarn build && cd apps/doc && yarn build",
     "fix": "manypkg fix",
     "postinstall": "yarn build",
     "build": "yarn workspaces foreach --exclude next-app run build",
