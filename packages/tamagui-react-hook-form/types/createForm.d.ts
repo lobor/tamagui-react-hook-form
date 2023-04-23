@@ -109,7 +109,7 @@ export declare function createForm<TValues extends FieldValues>(): (<TValues_1 e
             disablePassStyles?: boolean | undefined;
         }, "ref">) & import("react").RefAttributes<import("tamagui").TamaguiElement>>;
     };
-    Input: ((props: WithControllerProps<Partial<import("react-native/types").TextInputProps & Omit<import("tamagui").TextProps, keyof import("react-native/types").TextInputProps> & Omit<{}, "size" | "unstyled"> & {
+    Input: ((props: WithControllerProps<Partial<Omit<import("react-native/types").TextInputProps & Omit<import("tamagui").TextProps, keyof import("react-native/types").TextInputProps> & Omit<{}, "size" | "unstyled"> & {
         readonly unstyled?: boolean | undefined;
         readonly size?: import("tamagui").SizeTokens | undefined;
     } & import("@tamagui/web").MediaProps<Partial<import("react-native/types").TextInputProps & Omit<import("tamagui").TextProps, keyof import("react-native/types").TextInputProps> & Omit<{}, "size" | "unstyled"> & {
@@ -118,7 +118,9 @@ export declare function createForm<TValues extends FieldValues>(): (<TValues_1 e
     }>> & import("@tamagui/web").PseudoProps<Partial<import("react-native/types").TextInputProps & Omit<import("tamagui").TextProps, keyof import("react-native/types").TextInputProps> & Omit<{}, "size" | "unstyled"> & {
         readonly unstyled?: boolean | undefined;
         readonly size?: import("tamagui").SizeTokens | undefined;
-    }>> & import("react").RefAttributes<import("tamagui").TamaguiElement>>, TValues>) => JSX.Element) & import("@tamagui/web").ReactComponentWithRef<import("react-native/types").TextInputProps & Omit<import("tamagui").TextProps, keyof import("react-native/types").TextInputProps> & Omit<{}, "size" | "unstyled"> & {
+    }>>, "placeholderTextColor"> & {
+        placeholderTextColor?: string | import("@tamagui/web").UnionableString | import("react-native/types").OpaqueColorValue | import("@tamagui/web").Variable<any> | undefined;
+    } & import("react").RefAttributes<import("tamagui").TamaguiElement>>, TValues>) => JSX.Element) & import("@tamagui/web").ReactComponentWithRef<Omit<import("react-native/types").TextInputProps & Omit<import("tamagui").TextProps, keyof import("react-native/types").TextInputProps> & Omit<{}, "size" | "unstyled"> & {
         readonly unstyled?: boolean | undefined;
         readonly size?: import("tamagui").SizeTokens | undefined;
     } & import("@tamagui/web").MediaProps<Partial<import("react-native/types").TextInputProps & Omit<import("tamagui").TextProps, keyof import("react-native/types").TextInputProps> & Omit<{}, "size" | "unstyled"> & {
@@ -127,13 +129,15 @@ export declare function createForm<TValues extends FieldValues>(): (<TValues_1 e
     }>> & import("@tamagui/web").PseudoProps<Partial<import("react-native/types").TextInputProps & Omit<import("tamagui").TextProps, keyof import("react-native/types").TextInputProps> & Omit<{}, "size" | "unstyled"> & {
         readonly unstyled?: boolean | undefined;
         readonly size?: import("tamagui").SizeTokens | undefined;
-    }>>, import("tamagui").TamaguiElement> & {
+    }>>, "placeholderTextColor"> & {
+        placeholderTextColor?: string | import("@tamagui/web").UnionableString | import("react-native/types").OpaqueColorValue | import("@tamagui/web").Variable<any> | undefined;
+    }, import("tamagui").TamaguiElement> & {
         staticConfig: import("tamagui").StaticConfigParsed;
         extractable: <X>(a: X, opts?: Partial<import("tamagui").StaticConfig> | undefined) => X;
     } & {
-        contextType: import("react").Context<any> | undefined;
         prototype: import("react-native/types").TextInput;
         State: import("react-native/types").TextInputState;
+        contextType: import("react").Context<any> | undefined;
     };
     RadioGroup: ((props: WithControllerProps<Partial<Omit<import("react-native/types").ViewProps, "children" | "display" | "onLayout" | keyof import("react-native/types").GestureResponderHandlers> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps & Omit<{
         readonly fullscreen?: boolean | undefined;
@@ -439,9 +443,12 @@ export declare function createForm<TValues extends FieldValues>(): (<TValues_1 e
         }>>), import("tamagui").TamaguiElement, Omit<import("react-native/types").ViewProps, "children" | "display" | "onLayout" | keyof import("react-native/types").GestureResponderHandlers> & import("@tamagui/web").ExtendBaseStackProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase>> & import("@tamagui/core/types/reactNativeTypes").RNViewProps, {
             readonly fullscreen?: boolean | undefined;
             readonly elevation?: import("tamagui").SizeTokens | undefined;
+        } | ({
+            readonly fullscreen?: boolean | undefined;
+            readonly elevation?: import("tamagui").SizeTokens | undefined;
         } & {
             [x: string]: undefined;
-        }, {
+        }), {
             displayName: string | undefined;
         }>;
         Item: import("react").ForwardRefExoticComponent<import("tamagui").SelectItemProps & import("react").RefAttributes<import("tamagui").TamaguiElement>>;
@@ -667,41 +674,53 @@ export declare function createForm<TValues extends FieldValues>(): (<TValues_1 e
             placeholder?: import("react").ReactNode;
         }, "ref"> | Omit<Omit<import("react-native/types").TextProps, "children" | "onLayout" | keyof import("react-native/types").GestureResponderHandlers> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
             readonly size?: import("tamagui").FontSizeTokens | undefined;
+        } | ({
+            readonly size?: import("tamagui").FontSizeTokens | undefined;
         } & {
             [x: string]: undefined;
-        }, string | number> & {
+        }), string | number> & {
             [x: string]: undefined;
         } & import("@tamagui/web").MediaProps<Partial<Omit<import("react-native/types").TextProps, "children" | "onLayout" | keyof import("react-native/types").GestureResponderHandlers> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
             readonly size?: import("tamagui").FontSizeTokens | undefined;
-        } & {
-            [x: string]: undefined;
-        }, string | number> & {
-            [x: string]: undefined;
-        }>> & import("@tamagui/web").PseudoProps<Partial<Omit<import("react-native/types").TextProps, "children" | "onLayout" | keyof import("react-native/types").GestureResponderHandlers> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+        } | ({
             readonly size?: import("tamagui").FontSizeTokens | undefined;
         } & {
             [x: string]: undefined;
-        }, string | number> & {
+        }), string | number> & {
+            [x: string]: undefined;
+        }>> & import("@tamagui/web").PseudoProps<Partial<Omit<import("react-native/types").TextProps, "children" | "onLayout" | keyof import("react-native/types").GestureResponderHandlers> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+            readonly size?: import("tamagui").FontSizeTokens | undefined;
+        } | ({
+            readonly size?: import("tamagui").FontSizeTokens | undefined;
+        } & {
+            [x: string]: undefined;
+        }), string | number> & {
             [x: string]: undefined;
         }>> & {
             placeholder?: import("react").ReactNode;
         }, "ref"> | Omit<Omit<import("react-native/types").TextProps, "children" | "onLayout" | keyof import("react-native/types").GestureResponderHandlers> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
             readonly size?: import("tamagui").FontSizeTokens | undefined;
+        } | ({
+            readonly size?: import("tamagui").FontSizeTokens | undefined;
         } & {
             [x: string]: undefined;
-        }, string | number> & {
+        }), string | number> & {
             [x: string]: undefined;
         } & import("@tamagui/web").MediaProps<Partial<Omit<import("react-native/types").TextProps, "children" | "onLayout" | keyof import("react-native/types").GestureResponderHandlers> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
             readonly size?: import("tamagui").FontSizeTokens | undefined;
-        } & {
-            [x: string]: undefined;
-        }, string | number> & {
-            [x: string]: undefined;
-        }>> & import("@tamagui/web").PseudoProps<Partial<Omit<import("react-native/types").TextProps, "children" | "onLayout" | keyof import("react-native/types").GestureResponderHandlers> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+        } | ({
             readonly size?: import("tamagui").FontSizeTokens | undefined;
         } & {
             [x: string]: undefined;
-        }, string | number> & {
+        }), string | number> & {
+            [x: string]: undefined;
+        }>> & import("@tamagui/web").PseudoProps<Partial<Omit<import("react-native/types").TextProps, "children" | "onLayout" | keyof import("react-native/types").GestureResponderHandlers> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{
+            readonly size?: import("tamagui").FontSizeTokens | undefined;
+        } | ({
+            readonly size?: import("tamagui").FontSizeTokens | undefined;
+        } & {
+            [x: string]: undefined;
+        }), string | number> & {
             [x: string]: undefined;
         }>> & {
             placeholder?: import("react").ReactNode;
@@ -830,11 +849,11 @@ export declare function createForm<TValues extends FieldValues>(): (<TValues_1 e
             }, "closed"> & {
                 readonly closed?: boolean | undefined;
             }>>>) => JSX.Element;
-            ScrollView: import("react").ForwardRefExoticComponent<import("react-native/types").ScrollViewProps & Omit<import("@tamagui/web").StackProps, keyof import("react-native/types").ScrollViewProps> & Omit<{}, "fullscreen"> & {
+            ScrollView: import("react").ForwardRefExoticComponent<import("react-native/types").ScrollViewProps & Omit<import("tamagui").StackProps, keyof import("react-native/types").ScrollViewProps> & Omit<{}, "fullscreen"> & {
                 readonly fullscreen?: boolean | undefined;
-            } & import("@tamagui/web").MediaProps<Partial<import("react-native/types").ScrollViewProps & Omit<import("@tamagui/web").StackProps, keyof import("react-native/types").ScrollViewProps> & Omit<{}, "fullscreen"> & {
+            } & import("@tamagui/web").MediaProps<Partial<import("react-native/types").ScrollViewProps & Omit<import("tamagui").StackProps, keyof import("react-native/types").ScrollViewProps> & Omit<{}, "fullscreen"> & {
                 readonly fullscreen?: boolean | undefined;
-            }>> & import("@tamagui/web").PseudoProps<Partial<import("react-native/types").ScrollViewProps & Omit<import("@tamagui/web").StackProps, keyof import("react-native/types").ScrollViewProps> & Omit<{}, "fullscreen"> & {
+            }>> & import("@tamagui/web").PseudoProps<Partial<import("react-native/types").ScrollViewProps & Omit<import("tamagui").StackProps, keyof import("react-native/types").ScrollViewProps> & Omit<{}, "fullscreen"> & {
                 readonly fullscreen?: boolean | undefined;
             }>> & import("react").RefAttributes<import("tamagui").TamaguiElement>>;
         };
@@ -1041,10 +1060,10 @@ export declare function createForm<TValues extends FieldValues>(): (<TValues_1 e
         staticConfig: import("tamagui").StaticConfigParsed;
         extractable: <X>(a: X, opts?: Partial<import("tamagui").StaticConfig> | undefined) => X;
     } & {
-        contextType: import("react").Context<any> | undefined;
         displayName: string | undefined;
         prototype: any;
         State: import("react-native/types").TextInputState;
+        contextType: import("react").Context<any> | undefined;
     };
     Value: ((props: WithControllerProps<Partial<Omit<import("react-native/types").TextProps, "children" | "onLayout" | keyof import("react-native/types").GestureResponderHandlers> & import("@tamagui/web").ExtendsBaseTextProps & import("tamagui").TamaguiComponentPropsBase & import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").TextStylePropsBase>> & Omit<{}, "size"> & {
         readonly size?: import("tamagui").FontSizeTokens | undefined;

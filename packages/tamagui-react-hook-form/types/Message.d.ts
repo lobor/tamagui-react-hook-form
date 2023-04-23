@@ -21,9 +21,11 @@ declare const MessageText: import("tamagui").TamaguiComponent<(Omit<import("reac
     [x: string]: undefined;
 }>>), import("tamagui").TamaguiElement, import("tamagui").TextPropsBase, {
     readonly size?: import("tamagui").FontSizeTokens | undefined;
+} | ({
+    readonly size?: import("tamagui").FontSizeTokens | undefined;
 } & {
     [x: string]: undefined;
-}, {
+}), {
     displayName: string | undefined;
 }>;
 export type MessageProps = GetProps<typeof MessageText> & {

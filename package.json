@@ -16,6 +16,7 @@
     "doc": "yarn build && cd apps/doc && yarn start",
     "doc:prod": "yarn build && cd apps/doc && yarn build",
     "fix": "manypkg fix",
+    "build": "yarn workspace tamagui-react-hook-form run build",
     "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader && manypkg upgrade react-native-web-lite"
   },
   "resolutions": {
