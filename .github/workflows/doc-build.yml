@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile --non-interactive
       - name: Build
-        run: yarn doc:build
+        run: yarn doc:prod
       # 👆 Build steps
       - name: Setup Pages
         uses: actions/configure-pages@v1
