@@ -1,1 +1,2 @@
-export * from './createForm'
+export * from './createConfigForm'
+export * from './defaultComponents'

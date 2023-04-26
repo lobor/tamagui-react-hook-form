@@ -1,5 +1,5 @@
 {
-  "name": "tamagui-react-hook-form",
+  "name": "@my/demo",
   "version": "0.1.0",
   "source": "src/index.ts",
   "types": "./types/index.d.ts",
@@ -10,22 +10,21 @@
     "types",
     "dist"
   ],
-  "repository": {
-    "url": "https://github.com/lobor/tamagui-react-hook-form"
-  },
   "scripts": {
     "build": "tamagui-build",
     "watch": "tamagui-build --watch"
   },
   "peerDependencies": {
+    "@my/ui": "*",
     "react": "*",
     "react-hook-form": "*",
-    "tamagui": "1.15.37"
+    "tamagui-react-hook-form": "*"
   },
   "devDependencies": {
+    "@my/ui": "*",
     "@tamagui/build": "1.15.37",
     "react": "*",
     "react-hook-form": "*",
-    "tamagui": "1.15.37"
+    "tamagui-react-hook-form": "*"
   }
 }

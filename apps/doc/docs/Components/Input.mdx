@@ -1,0 +1,19 @@
+# Input
+
+comming soon
+
+
+```jsx live noInline
+const ButtonThemed = (props) => {
+  const { colorMode } = useColorMode();
+  return <Button {...props} theme={colorMode} />;
+};
+
+const Greeting = () => (
+  <XStack space>
+    <ButtonThemed><Text>Default</Text></ButtonThemed>
+  </XStack>
+);
+
+render(<Greeting />);
+```
