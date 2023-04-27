@@ -36,9 +36,17 @@ transpilePackages: [
 ```
 
 ## Getting Started
+Create you `createForm` function with your component (by default use tamagui Form components)
 
 ```tsx
-import { createForm } from "tamagui-react-hook-form";
+// formConfig.ts
+import { createConfigForm, defaultComponents } from "tamagui-react-hook-form";
+
+export const createForm = createConfigForm(defaultComponents);
+```
+
+```tsx
+import { createForm } from "./formConfig";
 
 interface FormValues {
   text: string
