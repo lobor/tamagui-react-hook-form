@@ -14,7 +14,7 @@ import { Trigger } from './Trigger'
 type ReturnCreateForm<
   TValues extends FieldValues,
   TExtends extends {
-    [key: string]: CustomFieldControlled<{}>
+    [key: string]: CustomFieldControlled<any>
   }
 > = {
   [key in keyof TExtends]: ExtractStaticProperties<TExtends[key]['component']> & ((
@@ -24,9 +24,7 @@ type ReturnCreateForm<
 
 export const createConfigForm = <
   TProperties extends {
-    [key: string]: CustomFieldControlled<{}>
-  } = {
-    [key: string]: CustomFieldControlled<{}>
+    [key: string]: CustomFieldControlled<any>
   }
 >(
   properties: TProperties
