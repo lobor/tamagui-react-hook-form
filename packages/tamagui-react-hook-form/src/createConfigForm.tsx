@@ -10,6 +10,7 @@ import {
 import { withController } from './withController'
 import { FormComponent } from './Form'
 import { Trigger } from './Trigger'
+import { FieldControlled } from './Field'
 
 type ReturnCreateForm<
   TValues extends FieldValues,
@@ -17,9 +18,10 @@ type ReturnCreateForm<
     [key: string]: CustomFieldControlled<any>
   }
 > = {
-  [key in keyof TExtends]: ExtractStaticProperties<TExtends[key]['component']> & ((
-    props: WithControllerProps<Partial<ExtractProps<TExtends[key]['component']>>, TValues>
-  ) => JSX.Element)
+  [key in keyof TExtends]: ExtractStaticProperties<TExtends[key]['component']> &
+    ((
+      props: WithControllerProps<Partial<ExtractProps<TExtends[key]['component']>>, TValues>
+    ) => JSX.Element)
 }
 
 export const createConfigForm = <
@@ -42,14 +44,11 @@ export const createConfigForm = <
       )
       return acc
     }, {} as ReturnCreateForm<TValues, typeof properties>)
-    return withStaticProperties<
-      <TValues extends FieldValues>(props: FormProps<TValues>) => JSX.Element,
-      ReturnCreateForm<
-        TValues,
-        typeof properties & { Trigger: { component: typeof Trigger; mapProps: {} } }
-      >
-    >(FormComponent, { ...extendsComponentControlled, Trigger }) as unknown as ((
-      props: FormProps<TValues>
-    ) => JSX.Element) & ReturnCreateForm<TValues, TProperties> & { Trigger: typeof Trigger }
+    return withStaticProperties(FormComponent, {
+      ...extendsComponentControlled,
+      Trigger,
+      Field: FieldControlled,
+    }) as unknown as ((props: FormProps<TValues>) => JSX.Element) &
+      ReturnCreateForm<TValues, TProperties> & { Trigger: typeof Trigger, Field: typeof FieldControlled }
   }
 }
