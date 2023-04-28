@@ -1,182 +1,38 @@
-# tamagui-react-hook-form
+<a name="readme-top"></a>
+
+<br />
+<div align="center">
+  <!-- <a href="https://github.com/github_username/repo_name">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a> -->
+
+  <h3 align="center">tamagui-react-hook-form</h3>
+
+  <p align="center">
+    Merge <a href="https://react-hook-form.com">react-hook-form</a> with <a href="https://tamagui.dev">tamagui.dev</a> for create composable form
+    <br />
+    <a href="https://lobor.github.io/tamagui-react-hook-form/"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://www.npmjs.com/package/tamagui-react-hook-form">npm</a>
+    ·
+    <a href="https://github.com/lobor/tamagui-react-hook-form/issues">Report Bug</a>
+    <!-- ·
+    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a> -->
+  </p>
+</div>
 
 ## About The Project
+Tamagui is a great UI lib for cross-platform development, and react-hook-form is one of best form manager. `tamagui-react-hook-form` merge their powers with a composable API and customizable
 
-Extends all components form from [tamagui.dev](https://tamagui.dev/) with react-hook-form
+Thanks [tamagui.dev](https://tamagui.dev/) and [react-hook-form](https://react-hook-form.com/)  
 
-<!-- GETTING STARTED -->
+<!-- ROADMAP -->
+## Roadmap
 
-## Getting Started
-
-### Prerequisites
-
-Install packages  
-react-hook-form is peer dependencies, you should install it
-
-- npm
-  ```sh
-  npm install tamagui-react-hook-form@latest react-hook-form
-  ```
-
-## Anatomy
-See exemple [here](./demo/FormHookFormDemo.tsx)
-
-```TSX
-import { createForm } from "tamagui-react-hook-form";
-
-const Form = createForm();
-
-export default () => (
-  <Form>
-    <Form.Input />
-    <Form.Message />
-    <Form.Value />
-
-    <Form.Field>
-      <Form.Input />
-      <Form.Message />
-      <Form.Value />
-    </Form.Field>
-
-    <Form.Slider>
-      <Form.Slider.Track>
-        <Form.Slider.TrackActive />
-      </Form.Slider.Track>
-      <Form.Slider.Thumb />
-    </Form.Slider>
-
-    <Form.Switch>
-      <Form.Switch.Thumb />
-    </Form.Switch>
-
-    <Form.RadioGroup>
-      <Form.RadioGroup.Item>
-        <Form.RadioGroup.Indicator />
-      </Form.RadioGroup.Item>
-    </Form.RadioGroup>
-
-    <Form.Checkbox>
-      <Form.Checkbox.Indicator>
-        <Check />
-      </Form.Checkbox.Indicator>
-    </Form.Checkbox>
-
-    <Form.Trigger />
-  </Form>
-);
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Common props
-
-A prop exists for all components (except Form), it is `name`. It allows you to select the fields of the form
-
-```typescript
-import { createForm } from "tamagui-react-hook-form";
-
-interface FormValues {
-  pseudo: string;
-}
-
-const Form = createForm<FormValues>();
-
-export default () => {
-  return (
-    <Form defaultValues={{ pseudo: "" }}>
-      <Form.Input name="pseudo" />
-      <Form.Value name="pseudo" />
-    </Form>
-  );
-};
-```
-
-It can be repetitive to add to each component the prop `name`, so you can use Form.Field component
-
-```typescript
-import { createForm } from "tamagui-react-hook-form";
-
-interface FormValues {
-  pseudo: string;
-}
-
-const Form = createForm<FormValues>();
-
-export default () => {
-  return (
-    <Form defaultValues={{ pseudo: "" }}>
-      <Form.Field name="pseudo">
-        <Form.Input />
-        <Form.Value />
-      </Form.Field>
-    </Form>
-  );
-};
-```
-
-## API
-
-### Form
-
-Wrap tamagui [Form](https://tamagui.dev/docs/components/form) with [FormProvider](https://react-hook-form.com/api/formprovider/) of react-hook-form
-
-```typescript
-export default () => {
-  return (
-    <Form
-      onSubmit={(values) => {
-        console.log(values);
-      }}
-    >
-      {/* ... */}
-    </Form>
-  );
-};
-```
-
-#### Props
-
-Extends all props of [FromProps](https://tamagui.dev/docs/components/form#api) and [UseFormProps](https://react-hook-form.com/ts/#UseFormProps)
-
-| Props | Required | Description      |
-| ----- | -------- | ---------------- |
-| fRef  | false    | Get form context |
-
-### Message
-
-Show error message if you use with validation
-
-```typescript
-export default () => {
-  return <Form.Message />;
-};
-```
-
-#### Props
-
-Extends all props of [SizableText](https://tamagui.dev/docs/components/text#sizabletext)
-
-| Props | Required | Description                                  |
-| ----- | -------- | -------------------------------------------- |
-| name  | false    | Key corresponding to the type of values used |
-
-### Value
-
-Show value of element form
-
-```typescript
-export default () => {
-  return <Form.Value />;
-};
-```
-
-#### Props
-
-Extends all props of [SizableText](https://tamagui.dev/docs/components/text#sizabletext)
-
-| Props | Required | Description                                  |
-| ----- | -------- | -------------------------------------------- |
-| name  | false    | Key corresponding to the type of values used |
+- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Feature 3
 
 <!-- CONTRIBUTING -->
 
@@ -193,12 +49,8 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- LICENSE -->
 
 ## License
 
 Distributed under the Apache License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>

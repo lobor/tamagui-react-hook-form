@@ -1,7 +1,4 @@
 import { Checkbox, Input, RadioGroup, Select, Slider, Switch, TextArea, ToggleGroup } from 'tamagui'
-import { Value } from './Value'
-import { FieldControlled } from './Field'
-import { Message } from './Message'
 
 export const defaultComponents = {
   Checkbox: {
@@ -34,18 +31,6 @@ export const defaultComponents = {
   TextArea: {
     component: TextArea,
     mapProps: { onChange: 'onChangeText' },
-  },
-  Value: {
-    component: Value,
-    mapProps: {},
-  },
-  Field: {
-    component: FieldControlled,
-    mapProps: {},
-  },
-  Message: {
-    component: Message,
-    mapProps: {},
   },
   ToggleGroup: {
     component: ToggleGroup,

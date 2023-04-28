@@ -4,35 +4,11 @@ sidebar_position: 1
 
 # Introduction
 
-## Installation
+## Install package
 
-### Install package
-
-`tamagui` and `react-hook-form` are peer-dependencies, so you should install it if are not installed yet
-
+`tamagui` and `react-hook-form` are peer-dependencies, so you should install it if are not installed yet.
 ```bash
 npm install tamagui-react-hook-form tamagui react-hook-form
-```
-
-### Configuration
-
-In your tamagui loader add `tamagui-react-hook-form`
-
-```typescript
-withTamagui({
-  [...]
-  components: ["tamagui-react-hook-form", ...],
-  [...]
-}),
-```
-
-For `nextjs` add `tamagui-react-hook-form` in `transpilePackages`
-
-```typescript
-transpilePackages: [
-    'tamagui-react-hook-form',
-    [...]
-  ],
 ```
 
 ## Getting Started
@@ -40,9 +16,9 @@ Create you `createForm` function with your component (by default use tamagui For
 
 ```tsx
 // formConfig.ts
-import { createConfigForm, defaultComponents } from "tamagui-react-hook-form";
+import { createConfigForm, defaultComponents, defaultHelpers } from "tamagui-react-hook-form";
 
-export const createForm = createConfigForm(defaultComponents);
+export const createForm = createConfigForm(defaultComponents, defaultHelpers);
 ```
 
 ```tsx

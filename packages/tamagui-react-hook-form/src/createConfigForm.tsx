@@ -9,46 +9,72 @@ import {
 } from './types'
 import { withController } from './withController'
 import { FormComponent } from './Form'
-import { Trigger } from './Trigger'
-import { FieldControlled } from './Field'
+import { ComponentType } from 'react'
+
+
+type KeyOf<T, U extends keyof T = keyof T> = {
+  [Key in U]: T[Key]
+};
+
+// type toto = KeyOf<typeof Form>;
 
 type ReturnCreateForm<
   TValues extends FieldValues,
   TExtends extends {
     [key: string]: CustomFieldControlled<any>
-  }
+  },
+  U extends keyof TExtends = keyof TExtends
 > = {
-  [key in keyof TExtends]: ExtractStaticProperties<TExtends[key]['component']> &
+  [Key in U]: ExtractStaticProperties<TExtends[Key]['component']> &
     ((
-      props: WithControllerProps<Partial<ExtractProps<TExtends[key]['component']>>, TValues>
+      props: WithControllerProps<Partial<ExtractProps<TExtends[Key]['component']>>, TValues>
     ) => JSX.Element)
+}
+
+type AddName<TValues extends FieldValues, THelper extends { [key: string]: any }> = {
+  [Key in keyof THelper]: ComponentType<
+    Omit<ExtractProps<THelper[Key]>, 'name'> & { name?: keyof TValues }
+  >
 }
 
 export const createConfigForm = <
   TProperties extends {
     [key: string]: CustomFieldControlled<any>
-  }
+  },
+  THelpers extends { [key: string]: any }
 >(
-  properties: TProperties
+  properties: TProperties,
+  helpers: THelpers
 ) => {
-  return function createForm<TValues extends FieldValues>() {
+  return function createForm<
+    TValues extends FieldValues,
+    TQuick extends {
+      [key: string]: CustomFieldControlled<any>
+    } = {
+      [key: string]: CustomFieldControlled<any>
+    }
+  >(quickComponent?: TQuick) {
+    const allProperties = {
+      ...properties,
+      ...(quickComponent as TQuick),
+    }
     const extendsComponentControlled = (
-      Object.keys(properties) as (keyof typeof properties)[]
-    ).reduce<ReturnCreateForm<TValues, typeof properties>>((acc, key) => {
-      const { component, mapProps } = properties[key]
+      Object.keys(allProperties) as (keyof typeof allProperties)[]
+    ).reduce((acc, key) => {
+      const { component, mapProps } = allProperties[key]
       acc[key] = withStaticProperties(
         {
           ...component,
         } as any,
-        withController(component as any, mapProps as any)
+        withController(component as any, mapProps || {})
       )
       return acc
-    }, {} as ReturnCreateForm<TValues, typeof properties>)
+    }, {} as any)
     return withStaticProperties(FormComponent, {
       ...extendsComponentControlled,
-      Trigger,
-      Field: FieldControlled,
+      ...helpers,
     }) as unknown as ((props: FormProps<TValues>) => JSX.Element) &
-      ReturnCreateForm<TValues, TProperties> & { Trigger: typeof Trigger, Field: typeof FieldControlled }
+      ReturnCreateForm<TValues, typeof allProperties> &
+      Required<AddName<TValues, THelpers>>
   }
 }

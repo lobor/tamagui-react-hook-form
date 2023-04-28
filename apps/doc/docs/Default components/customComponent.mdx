@@ -1,0 +1,52 @@
+import { TamaguiProvider, Input, config } from '@my/ui'
+
+# Custom component
+
+```tsx
+import { createConfigForm, defaultComponents, defaultHelpers } from 'tamagui-react-hook-form'
+
+const createForm = createConfigForm(defaultComponents, defaultHelpers)
+
+const customComponents = {
+  CustomField: {
+    component: ({ value, onChange }) => {
+      return (
+        <XStack space="$4">
+          <Button
+            backgroundColor={value === 'Foo' ? '$backgroundStrong' : '$background'}
+            onPress={() => onChange('Foo')}
+          >
+            <ButtonText>Foo</ButtonText>
+          </Button>
+          <Button
+            backgroundColor={value === 'Bar' ? '$backgroundStrong' : '$background'}
+            onPress={() => onChange('Bar')}
+          >
+            <ButtonText>Bar</ButtonText>
+          </Button>
+          <Button
+            backgroundColor={value === 'Dupond' ? '$backgroundStrong' : '$background'}
+            onPress={() => onChange('Dupond')}
+          >
+            <ButtonText>Dupond</ButtonText>
+          </Button>
+        </XStack>
+      )
+    },
+  },
+}
+
+interface FormValues {
+  name: string
+}
+
+const Form = createForm<FormValues, typeof customComponents>(customComponents)
+
+render(() => {
+  return (
+    <Form onSubmit={(e) => console.log(e)}>
+      <Form.CustomField name="name" />
+    </Form>
+  )
+})
+```

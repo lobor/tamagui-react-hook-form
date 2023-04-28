@@ -10,7 +10,7 @@ const { shouldExclude, TamaguiPlugin } = require('tamagui-loader')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'tamagui-react-hook-form',
-  tagline: 'tamagui form with react-hook-form',
+  tagline: 'Merge react-hook-form with tamagui for create composable form',
   favicon: 'img/favicon.ico',
 
   url: 'https://tamagui-react-hook-form.lobor',
@@ -84,7 +84,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
           {
             href: 'https://github.com/lobor/tamagui-react-hook-form',

@@ -29,6 +29,8 @@ export default function Home(): JSX.Element {
   return (
     <Layout title={`${siteConfig.title}`} description={`${siteConfig.title} documentation`}>
       <HomepageHeader />
+      <br />
+      <HomepageFeatures />
       {/* <main>
         <div className="container">
           <div className="text--center padding-horiz--md padding-vertical--md">

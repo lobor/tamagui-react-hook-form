@@ -3879,6 +3879,7 @@ __metadata:
     "@tamagui/themes": ^1.15.37
     "@tamagui/toast": ^1.15.37
     tamagui: ^1.15.37
+    tamagui-react-hook-form: "*"
   languageName: unknown
   linkType: soft
 
@@ -7459,7 +7460,6 @@ __metadata:
     expo-constants: ^14.2.1
     expo-linking: ^3.2.3
     solito: ^3.0.0
-    tamagui-react-hook-form: "*"
   languageName: unknown
   linkType: soft
 
@@ -10265,7 +10265,6 @@ __metadata:
     react-dom: ^17.0.2
     react-hook-form: "*"
     tamagui-loader: 1.15.37
-    tamagui-react-hook-form: "*"
     typescript: ^4.7.4
   languageName: unknown
   linkType: soft

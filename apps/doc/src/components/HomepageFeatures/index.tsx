@@ -9,35 +9,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Typescript',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and used to get your
-        website up and running quickly.
+        Entirely created in Typescript and with typing of values and fields
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Customizable',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go ahead and move your
-        docs into the <code>docs</code> directory.
+        You can create and use your custom component and configure transfer props
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Performance',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can be extended while
-        reusing the same header and footer.
+        the tamagui and react-hook-form combo allows to have very powerful forms 
       </>
     ),
   },
 ]
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ title, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center padding-horiz--md">

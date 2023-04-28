@@ -16,8 +16,7 @@
     "@tamagui/themes": "^1.15.37",
     "expo-constants": "^14.2.1",
     "expo-linking": "^3.2.3",
-    "solito": "^3.0.0",
-    "tamagui-react-hook-form": "*"
+    "solito": "^3.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

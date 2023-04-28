@@ -9,13 +9,17 @@ import {
   YStack,
   Adapt,
   Sheet,
+  ButtonText,
+  createForm,
+  createConfigForm,
+  SizableTextProps,
 } from '@my/ui'
 import { Check, ChevronDown, ChevronLeft, ChevronUp } from '@tamagui/lucide-icons'
-import React, { useRef, useState } from 'react'
+import React, { useMemo, useRef, useState } from 'react'
 import { createParam } from 'solito'
 import { useLink } from 'solito/link'
-import { UseFormReturn } from 'react-hook-form'
-import { createForm } from '../../Form'
+import { UseFormReturn, useFormContext } from 'react-hook-form'
+import { defaultComponents, useField } from 'tamagui-react-hook-form'
 
 const { useParam } = createParam<{ id: string }>()
 
@@ -30,7 +34,53 @@ interface SignUpValues {
   color: 'Yellow' | 'Blue' | 'Green' | ''
 }
 
-const Form = createForm<SignUpValues>()
+const toto = {
+  Test: {
+    component: ({ value, onChange }: { value: string; onChange: (param: string) => void }) => {
+      return (
+        <XStack space="$4">
+          <Button
+            backgroundColor={value === 'Foo' ? '$backgroundStrong' : '$background'}
+            onPress={() => onChange('Foo')}
+          >
+            <ButtonText>Foo</ButtonText>
+          </Button>
+          <Button
+            backgroundColor={value === 'Bar' ? '$backgroundStrong' : '$background'}
+            onPress={() => onChange('Bar')}
+          >
+            <ButtonText>Bar</ButtonText>
+          </Button>
+          <Button
+            backgroundColor={value === 'Dupond' ? '$backgroundStrong' : '$background'}
+            onPress={() => onChange('Dupond')}
+          >
+            <ButtonText>Dupond</ButtonText>
+          </Button>
+        </XStack>
+      )
+    },
+  },
+}
+
+const Form = createForm<SignUpValues, typeof toto>(toto)
+
+interface NewFormValues {
+  name: string
+}
+
+const customHelpers = {
+  Foo: ({ name, ...props }: SizableTextProps & { name?: keyof NewFormValues }) => {
+    const { name: nameField } = useField()
+    const { watch } = useFormContext()
+    const value = watch(name ?? nameField)
+    return useMemo(() => <SizableText {...props}>Foo: {value}</SizableText>, [value, props])
+  },
+}
+
+const newCreateForm = createConfigForm<typeof defaultComponents, typeof customHelpers>(defaultComponents, customHelpers)
+
+const NewForm = newCreateForm<NewFormValues, typeof defaultComponents>(defaultComponents)
 
 export function UserDetailScreen() {
   const [id] = useParam('id')
@@ -58,7 +108,11 @@ export function UserDetailScreen() {
         <Paragraph ta="center" fow="800">{`User ID: ${id}`}</Paragraph>
         <Button {...link} icon={ChevronLeft}></Button>
       </YStack>
-      <XStack space alignItems='flex-start'>
+      <XStack space alignItems="flex-start">
+        <NewForm onSubmit={() => {}}>
+          <NewForm.Input name="name" />
+          <NewForm.Foo name="name" />
+        </NewForm>
         <Form
           fRef={formRef}
           onSubmit={(values) => {
@@ -88,6 +142,8 @@ export function UserDetailScreen() {
             />
             <Form.Message name="pseudo" />
           </YStack>
+
+          <Form.Test name="pseudo" />
 
           <YStack>
             <Label htmlFor="color">Your color</Label>
@@ -244,7 +300,7 @@ export function UserDetailScreen() {
           flex={1}
         >
           <SizableText tag="pre" whiteSpace="pre">
-            {JSON.stringify(values, null, 2) || "No data recieve"}
+            {JSON.stringify(values, null, 2) || 'No data recieve'}
           </SizableText>
         </SizableStack>
       </XStack>

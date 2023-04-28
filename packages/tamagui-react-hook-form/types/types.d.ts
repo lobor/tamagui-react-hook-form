@@ -13,7 +13,7 @@ export type WithControllerProps<TProps, TFieldValues extends FieldValues = Field
 };
 export type CustomFieldControlled<TProps> = {
     component: React.JSXElementConstructor<TProps>;
-    mapProps: Partial<Record<keyof ControllerRenderProps, TProps>>;
+    mapProps?: Partial<Record<keyof ControllerRenderProps, TProps>>;
 };
 export type ExtractProps<TComponentOrTProps> = TComponentOrTProps extends React.ComponentType<infer TProps> ? TProps : TComponentOrTProps;
 export type ExtractStaticProperties<TProperties> = TProperties extends React.ComponentType & TProperties ? TProperties : {};

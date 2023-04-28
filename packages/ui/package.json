@@ -23,7 +23,8 @@
     "@tamagui/shorthands": "^1.15.37",
     "@tamagui/themes": "^1.15.37",
     "@tamagui/toast": "^1.15.37",
-    "tamagui": "^1.15.37"
+    "tamagui": "^1.15.37",
+    "tamagui-react-hook-form": "*"
   },
   "devDependencies": {
     "@tamagui/build": "^1.15.37"
