@@ -1,52 +1,109 @@
-import { TamaguiProvider, Input, config } from '@my/ui'
+import { ButtonText, XStack, Button, Tabs, SizableText, Separator, TabsProps } from '@my/ui'
+import { LiveBlock } from '../../components/LiveBlock'
+import {
+  createConfigForm,
+  defaultComponents,
+  defaultHelpers,
+  useField,
+} from 'tamagui-react-hook-form'
+import { useFormContext } from 'react-hook-form'
 
 # Custom component
 
-```tsx
-import { createConfigForm, defaultComponents, defaultHelpers } from 'tamagui-react-hook-form'
-
+<LiveBlock
+  scope={{
+    createConfigForm,
+    defaultComponents,
+    defaultHelpers,
+    useField,
+    useFormContext,
+    ButtonText,
+    XStack,
+    Button,
+    Tabs,
+    SizableText,
+    Separator,
+    TabsProps
+  }}
+  code={`
 const createForm = createConfigForm(defaultComponents, defaultHelpers)
 
 const customComponents = {
-  CustomField: {
-    component: ({ value, onChange }) => {
-      return (
-        <XStack space="$4">
-          <Button
-            backgroundColor={value === 'Foo' ? '$backgroundStrong' : '$background'}
-            onPress={() => onChange('Foo')}
-          >
-            <ButtonText>Foo</ButtonText>
-          </Button>
-          <Button
-            backgroundColor={value === 'Bar' ? '$backgroundStrong' : '$background'}
-            onPress={() => onChange('Bar')}
-          >
-            <ButtonText>Bar</ButtonText>
-          </Button>
-          <Button
-            backgroundColor={value === 'Dupond' ? '$backgroundStrong' : '$background'}
-            onPress={() => onChange('Dupond')}
-          >
-            <ButtonText>Dupond</ButtonText>
-          </Button>
-        </XStack>
-      )
-    },
+  Tabs: {
+    component: Tabs,
+    mapProps: {
+      onChange: "onValueChange"
+    }
   },
 }
 
 interface FormValues {
-  name: string
+  type: string
 }
 
 const Form = createForm<FormValues, typeof customComponents>(customComponents)
 
 render(() => {
   return (
-    <Form onSubmit={(e) => console.log(e)}>
-      <Form.CustomField name="name" />
+    <Form
+      onSubmit={(e) => console.log(e)}
+      defaultValues={{ type: "corporate" }}
+      theme="dark"
+    >
+      <Form.Value name="type" marginHorizontal="auto" />
+      <Form.Tabs
+        name="type"
+        orientation="horizontal"
+        flexDirection="column"
+        width={400}
+        height={150}
+        overflow="hidden"
+        borderColor="$borderColor"
+        borderRadius="$4"
+        borderWidth="$0.25"
+        marginHorizontal="auto"
+      >
+        <Form.Tabs.List
+          separator={<Separator vertical />}
+          disablePassBorderRadius="bottom"
+        >
+          <Form.Tabs.Tab flex={1} value="corporate">
+            <SizableText fontFamily="$body">Corporate</SizableText>
+          </Form.Tabs.Tab>
+          <Form.Tabs.Tab flex={1} value="major">
+            <SizableText fontFamily="$body">Major</SizableText>
+          </Tabs.Tab>
+          <Form.Tabs.Tab flex={1} value="minor">
+            <SizableText fontFamily="$body">minor</SizableText>
+          </Tabs.Tab>
+        </Form.Tabs.List>
+
+        <Form.Tabs.Content
+          value="corporate"
+          alignItems="center"
+          justifyContent="center"
+          flex={1}
+        >
+          <SizableText>Tab Corporate</SizableText>
+        </Form.Tabs.Content>
+        <Form.Tabs.Content
+          value="major"
+          alignItems="center"
+          justifyContent="center"
+          flex={1}
+        >
+          <SizableText>Tab Major</SizableText>
+        </Form.Tabs.Content>
+        <Form.Tabs.Content
+          value="minor"
+          alignItems="center"
+          justifyContent="center"
+          flex={1}
+        >
+          <SizableText>Tab Minor</SizableText>
+        </Form.Tabs.Content>
+      </Form.Tabs>
     </Form>
   )
-})
-```
+}) `} />
+

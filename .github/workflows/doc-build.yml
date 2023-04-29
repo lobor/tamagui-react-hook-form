@@ -25,6 +25,8 @@ jobs:
           cache: yarn
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: Linter
+        run: yarn linter
       - name: Build
         run: yarn doc:prod
       # 👆 Build steps

@@ -1,0 +1,31 @@
+{
+  "$schema": "./node_modules/rome/configuration_schema.json",
+  "organizeImports": {
+    "enabled": false
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noEmptyInterface": "off"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "warn"
+      },
+      "a11y":{
+        "noHeaderScope":"off"
+      }
+    },
+    "ignore": [
+      "**/tsconfig.json",
+      "**/tsconfig.base.json",
+      "dist",
+      "types",
+      ".next",
+      "out",
+      ".tamagui"
+    ]
+  }
+}

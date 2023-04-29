@@ -1,0 +1,38 @@
+import { LiveBlock } from '../../components/LiveBlock'
+import {
+  createConfigForm,
+  defaultComponents,
+  defaultHelpers,
+  useField,
+} from 'tamagui-react-hook-form'
+import { SizableText } from "@my/ui"
+import { useFormContext } from 'react-hook-form'
+
+# Custom helper
+
+<LiveBlock
+  scope={{ createConfigForm, defaultComponents, defaultHelpers, useField, useFormContext, SizableText }}
+  code={`
+const customHelpers = {
+  Foo: ({ name, ...props }: SizableTextProps & { name?: keyof NewFormValues }) => {
+    const { name: nameField } = useField()
+    const { watch } = useFormContext()
+    const value = watch(name ?? nameField)
+    return <SizableText {...props}>Foo: {value}</SizableText>
+  },
+}
+
+const createForm = createConfigForm(defaultComponents, customHelpers)
+
+interface FormValues {
+  name: string
+}
+
+const Form = createForm<FormValues>()
+console.log(Form.Foo)
+render(
+  <Form onSubmit={(e) => console.log(e)}>
+    <Form.Input name="name" />
+    <Form.Foo name="name" />
+  </Form>
+) `} />

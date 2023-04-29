@@ -1,4 +1,6 @@
 pre.prism-code.language-tsx {
   padding: 0 !important;
   background-color: transparent !important;
+  font-size: 13px;
+  word-spacing: 4px;
 }

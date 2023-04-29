@@ -18,15 +18,9 @@ npm install tamagui-react-hook-form tamagui react-hook-form
 ## Getting Started
 Create you `createForm` function with your component (by default use tamagui Form components)
 
-{/* ```js
-// formConfig.ts
-import { createConfigForm, defaultComponents, defaultHelpers } from "tamagui-react-hook-form";
-
-export const createForm = createConfigForm(defaultComponents, defaultHelpers);
-``` */}
 <LiveBlock
-scope={{ createConfigForm, defaultComponents, defaultHelpers, Button, Label, XStack, SizableText }}
-code={`
+  scope={{ createConfigForm, defaultComponents, defaultHelpers, Button, Label, XStack, SizableText }}
+  code={`
 // import { createConfigForm, defaultComponents, defaultHelpers } from "tamagui-react-hook-form";
 // import { Button, Label, XStack, SizableText } from "tamagui";
 
@@ -42,16 +36,16 @@ const App = () => {
   return (
     <Form
       onSubmit={(value) => console.log(value)}
-      defaultValue={{ test: "Default text" }}
+      defaultValues={{ text: "World" }}
       width="50%"
       marginHorizontal="auto"
       gap="$4"
     >
       <Label height="$2" htmlFor="name">Your Name</Label>
       <Form.Input name="text" id="name" />
-      <XStack gap="$1">
+      <XStack gap="$4">
         <SizableText>Hello</SizableText>
-        <Form.Value name="text" />
+        <Form.Value name="text" backgroundColor="$yellow7" paddingHorizontal="$4" />
       </XStack>
       <Form.Trigger asChild>
         <Button>Submit</Button>
@@ -61,28 +55,4 @@ const App = () => {
 };
 
 render(<App />);
-`} />
-
-{/* ```js
-import { createForm } from "./formConfig";
-
-interface FormValues {
-  text: string
-}
-
-const Form = createForm<FormValues>();
-
-export default const App = () => {
-  return (
-    <Form
-      onSubmit={(value) => console.log(value)}
-      defaultValue={{ test: "Default text" }}
-    >
-      <Form.Input name="text" />
-      <Form.Trigger asChild>
-        <Button>Submit</Button>
-      </Form.Trigger>
-    </Form>
-  )
-}
-``` */}
+  `} />

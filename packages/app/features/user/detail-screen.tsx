@@ -106,7 +106,7 @@ export function UserDetailScreen() {
     <YStack space width="90%" marginHorizontal="auto">
       <YStack>
         <Paragraph ta="center" fow="800">{`User ID: ${id}`}</Paragraph>
-        <Button {...link} icon={ChevronLeft}></Button>
+        <Button {...link} icon={ChevronLeft} />
       </YStack>
       <XStack space alignItems="flex-start">
         <NewForm onSubmit={() => {}}>

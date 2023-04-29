@@ -19,7 +19,10 @@
     "@my/demo": "*",
     "@my/ui": "*",
     "@tamagui/next-plugin": "^1.20.7",
+    "@types/prismjs": "^1.26.0",
     "app": "*",
+    "prism-themes": "^1.9.0",
+    "prismjs": "^1.29.0",
     "react-live": "^4.0.0",
     "tamagui-react-hook-form": "*"
   }

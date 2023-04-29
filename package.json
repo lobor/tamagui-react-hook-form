@@ -6,6 +6,7 @@
     "packages/*"
   ],
   "scripts": {
+    "linter": "rome check ./",
     "native": "cd apps/expo && yarn start",
     "watch": "yarn workspaces foreach -pi run watch",
     "vercel:install": "yarn set version 3.5 && yarn install",
@@ -35,5 +36,8 @@
     "turbo": "^1.8.3",
     "typescript": "^4.7.4"
   },
-  "packageManager": "yarn@3.5.0"
+  "packageManager": "yarn@3.5.0",
+  "devDependencies": {
+    "rome": "^12.0.0"
+  }
 }

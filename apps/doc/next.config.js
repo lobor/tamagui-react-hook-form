@@ -24,12 +24,12 @@ module.exports = function (name, { defaultConfig }) {
     images: {
       unoptimized: true,
     },
-    basePath: process.env.NODE_ENV === 'development' ? '/' : '/tamagui-react-hook-form/',
+    basePath: process.env.NODE_ENV === 'development' ? undefined : '/tamagui-react-hook-form',
     assetPrefix: process.env.NODE_ENV === 'development' ? '/' : '/tamagui-react-hook-form/',
     output: 'export',
     modularizeImports: {
       '@tamagui/lucide-icons': {
-        transform: `@tamagui/lucide-icons/dist/esm/icons/{{kebabCase member}}`,
+        transform: "@tamagui/lucide-icons/dist/esm/icons/{{kebabCase member}}",
         skipDefaultConversion: true,
       },
     },

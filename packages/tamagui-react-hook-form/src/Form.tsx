@@ -5,7 +5,6 @@ import {
 import { useIsomorphicLayoutEffect, Form as FormDefault } from 'tamagui'
 
 function FormComponent<TValues extends FieldValues>({
-  children,
   onSubmit,
   mode,
   reValidateMode,
@@ -45,7 +44,7 @@ function FormComponent<TValues extends FieldValues>({
 
   return (
     <FormProvider {...form}>
-      <FormDefault onSubmit={form.handleSubmit(onSubmit)} {...formProps} children={children} />
+      <FormDefault onSubmit={form.handleSubmit(onSubmit)} {...formProps} />
     </FormProvider>
   )
 }
