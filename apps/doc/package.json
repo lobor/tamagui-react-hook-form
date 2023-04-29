@@ -3,7 +3,7 @@
   "packageManager": "yarn@3.5.0",
   "scripts": {
     "dev": "next dev",
-    "build": "cd ../.. && yarn build && cd apps/doc2 && next build",
+    "build": "next build",
     "start": "next start",
     "serve": "NODE_ENV=production next start --port 8151",
     "lint": "next lint"
