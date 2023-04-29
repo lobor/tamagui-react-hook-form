@@ -8254,9 +8254,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"doc2@workspace:apps/doc":
+"doc@workspace:apps/doc":
   version: 0.0.0-use.local
-  resolution: "doc2@workspace:apps/doc"
+  resolution: "doc@workspace:apps/doc"
   dependencies:
     "@my/demo": "*"
     "@my/ui": "*"
@@ -8268,6 +8268,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-live: ^4.0.0
+    tamagui-react-hook-form: "*"
   languageName: unknown
   linkType: soft
 
