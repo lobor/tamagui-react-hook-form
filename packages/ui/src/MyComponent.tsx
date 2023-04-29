@@ -4,7 +4,7 @@ import { styled, YStack } from 'tamagui'
 
 const Parent = styled(YStack, {
   name: 'MyComponent',
-  bc: 'red',
+  backgroundColor: 'red',
 
   variants: {
     blue: {
