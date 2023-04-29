@@ -1,3 +1,3 @@
-import { config } from '@my/ui'
+import config from 'app/tamagui.config'
 
 export default config

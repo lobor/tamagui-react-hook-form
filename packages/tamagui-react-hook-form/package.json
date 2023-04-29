@@ -20,12 +20,12 @@
   "peerDependencies": {
     "react": "*",
     "react-hook-form": "*",
-    "tamagui": "1.15.37"
+    "tamagui": "1.20.7"
   },
   "devDependencies": {
-    "@tamagui/build": "1.15.37",
+    "@tamagui/build": "1.20.7",
     "react": "*",
     "react-hook-form": "*",
-    "tamagui": "1.15.37"
+    "tamagui": "1.20.7"
   }
 }

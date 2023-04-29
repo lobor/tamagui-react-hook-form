@@ -1,6 +1,8 @@
+import React, { PropsWithChildren } from 'react'
+import { Button } from 'tamagui'
 import { styled, YStack } from 'tamagui'
 
-export const MyComponent = styled(YStack, {
+const Parent = styled(YStack, {
   name: 'MyComponent',
   bc: 'red',
 
@@ -12,3 +14,10 @@ export const MyComponent = styled(YStack, {
     },
   } as const,
 })
+export const MyComponent = ({ children }: PropsWithChildren) => {
+  return (
+    <Parent>
+      <Button>{children}</Button>
+    </Parent>
+  )
+}

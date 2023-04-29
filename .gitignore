@@ -5,7 +5,7 @@
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-
+out
 # expo
 **/.expo/*
 

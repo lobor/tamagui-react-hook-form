@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@my/ui": "*",
-    "@tamagui/build": "1.15.37",
+    "@tamagui/build": "1.20.7",
     "react": "*",
     "react-hook-form": "*",
     "tamagui-react-hook-form": "*"
