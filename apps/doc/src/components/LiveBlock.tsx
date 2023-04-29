@@ -1,12 +1,9 @@
-import { Button, Theme, YStack } from '@my/ui'
-import { useEffect, useRef, useState } from 'react'
+import { Button, YStack } from '@my/ui'
+import { useState } from 'react'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { useTheme } from 'next-themes'
 
 export const LiveBlock = ({ code, scope }) => {
   const [showCode, setShowCode] = useState(false)
-  const toto = useTheme()
-  console.log(toto.resolvedTheme)
   return (
     <LiveProvider code={code} scope={scope} noInline language="tsx">
         <YStack gap="$4" marginTop="$4">

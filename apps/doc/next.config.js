@@ -24,6 +24,7 @@ module.exports = function (name, { defaultConfig }) {
     images: {
       unoptimized: true,
     },
+    assetPrefix: process.env.NODE_ENV === 'development' ? '/' : '/tamagui-react-hook-form/',
     output: 'export',
     modularizeImports: {
       '@tamagui/lucide-icons': {
