@@ -18750,7 +18750,7 @@ __metadata:
   peerDependencies:
     react: "*"
     react-hook-form: "*"
-    tamagui: 1.20.7
+    tamagui: "*"
   languageName: unknown
   linkType: soft
 
