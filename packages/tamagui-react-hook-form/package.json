@@ -1,6 +1,6 @@
 {
   "name": "tamagui-react-hook-form",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "source": "src/index.ts",
   "types": "./types/index.d.ts",
   "main": "dist/cjs",
@@ -20,7 +20,7 @@
   "peerDependencies": {
     "react": "*",
     "react-hook-form": "*",
-    "tamagui": "1.20.7"
+    "tamagui": "*"
   },
   "devDependencies": {
     "@tamagui/build": "1.20.7",
