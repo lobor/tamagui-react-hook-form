@@ -2,7 +2,8 @@ import { FieldValues, FormProvider, useForm } from 'react-hook-form'
 import {
   FormProps,
 } from './types'
-import { useIsomorphicLayoutEffect, Form as FormDefault } from 'tamagui'
+import { Form as FormDefault } from 'tamagui'
+import { useEffect } from 'react'
 
 function FormComponent<TValues extends FieldValues>({
   onSubmit,
@@ -18,7 +19,7 @@ function FormComponent<TValues extends FieldValues>({
   shouldUseNativeValidation,
   criteriaMode,
   delayError,
-  fRef,
+  onChangeForm,
   ...formProps
 }: FormProps<TValues>) {
   const form = useForm<TValues>({
@@ -36,10 +37,8 @@ function FormComponent<TValues extends FieldValues>({
     delayError,
   })
 
-  useIsomorphicLayoutEffect(() => {
-    if (fRef) {
-      fRef.current = form
-    }
+  useEffect(() => {
+    onChangeForm?.(form)
   }, [form])
 
   return (

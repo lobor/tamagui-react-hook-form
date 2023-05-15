@@ -17,13 +17,11 @@ export type WithController<
   TFieldValues extends FieldValues = FieldValues
 > = React.ForwardRefRenderFunction<unknown, WithControllerProps<TProps, TFieldValues>>
 
-export type FRef<TFieldValues extends FieldValues = FieldValues> = UseFormReturn<TFieldValues>
-
 export type FormProps<TFieldValues extends FieldValues = FieldValues> = PropsWithChildren<
   UseFormProps<TFieldValues> &
     Omit<FormDefaultProps, 'onSubmit'> & {
       onSubmit: SubmitHandler<TFieldValues>
-      fRef?: MutableRefObject<FRef<TFieldValues> | null>
+      onChangeForm?: (form: UseFormReturn<TFieldValues>) => void
     }
 >
 

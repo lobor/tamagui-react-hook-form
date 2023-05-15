@@ -78,7 +78,10 @@ const customHelpers = {
   },
 }
 
-const newCreateForm = createConfigForm<typeof defaultComponents, typeof customHelpers>(defaultComponents, customHelpers)
+const newCreateForm = createConfigForm<typeof defaultComponents, typeof customHelpers>(
+  defaultComponents,
+  customHelpers
+)
 
 const NewForm = newCreateForm<NewFormValues, typeof defaultComponents>(defaultComponents)
 
@@ -89,7 +92,7 @@ export function UserDetailScreen() {
   })
 
   const [values, setValues] = useState<SignUpValues>()
-  const formRef = useRef<UseFormReturn<SignUpValues>>(null)
+  const formRef = useRef<UseFormReturn<SignUpValues>>()
 
   const defaultValues: SignUpValues = {
     pseudo: '',
@@ -101,7 +104,7 @@ export function UserDetailScreen() {
     prefer: '',
     color: '',
   }
-
+  console.log(formRef.current)
   return (
     <YStack space width="90%" marginHorizontal="auto">
       <YStack>
@@ -114,7 +117,7 @@ export function UserDetailScreen() {
           <NewForm.Foo name="name" />
         </NewForm>
         <Form
-          fRef={formRef}
+          onChangeForm={(form) => (formRef.current = form)}
           onSubmit={(values) => {
             setValues(values)
             formRef.current?.reset(defaultValues)
